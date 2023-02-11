@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,25 @@ public class Huo : Magic
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        //destroy if too far
+        if (Vector3.Distance(MagicHand.Instance.transform.position,transform.position)>100
+            && (transform.parent == null || transform.parent.name != "MagicHand"))
+            Destroy(gameObject);
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Wood")
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+        if(other.tag != "Huo" && other.tag != "Magic" && other.tag != "Player")
+            Destroy(gameObject);
+    }
+
     public static bool Recognizer(List<List<Vector2>> positions)
     {
         return (positions[0].First().y > positions[0].Last().y && //第一画从上到下
