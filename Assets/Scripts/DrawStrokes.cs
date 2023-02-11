@@ -88,7 +88,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
             {
                 print("HUO");
                 MagicHand.Instance.Activate("Huo");
-                MagicHand.Instance.Attack();
+                //MagicHand.Instance.Attack();
             }
             if (Shui.Recognizer(Writings)) print("SHUI");
         }

@@ -21,8 +21,8 @@ public class MagicHand : MonoBehaviour
     {
         cam = Camera.main;
         Huo.SetActive(false);
-        Activate("Huo");
-        Attack();
+        //Activate("Huo");
+        //Attack();
     }
 
     public void Activate(string magicName)
@@ -63,7 +63,7 @@ public class MagicHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale==1 && Input.GetMouseButtonDown(0))
+        if (Time.timeScale==1 && Input.GetMouseButtonDown(0) && ActiveMagic != null)
         {
             Attack();
         }
