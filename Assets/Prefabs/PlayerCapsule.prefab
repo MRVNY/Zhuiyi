@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Huo: {fileID: 8912430557773558637}
+  Shui: {fileID: 0}
+  Feng: {fileID: 0}
+  Gong: {fileID: 0}
+  Wei: {fileID: 0}
 --- !u!1 &4135013735270702863
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,9 +250,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 4
   SprintSpeed: 6
-  RotationSpeed: 1
+  RotationSpeed: 2
   SpeedChangeRate: 10
-  JumpHeight: 1.2
+  JumpHeight: 0
   Gravity: -15
   JumpTimeout: 0.1
   FallTimeout: 0.15
@@ -492,6 +496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565825154026304306, guid: 7b8e929bc437d4b44927e330f771f553,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5729878142628928754, guid: 7b8e929bc437d4b44927e330f771f553,
         type: 3}

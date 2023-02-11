@@ -86,9 +86,11 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         {
             if (Huo.Recognizer(Writings))
             {
-                print("HUO");
+                foreach (var line in lines)
+                {
+                    line.color = Color.green;
+                }
                 MagicHand.Instance.Activate("Huo");
-                //MagicHand.Instance.Attack();
             }
             if (Shui.Recognizer(Writings)) print("SHUI");
         }

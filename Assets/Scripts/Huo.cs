@@ -23,13 +23,16 @@ public class Huo : Magic
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Wood")
+        if (other.tag != "Huo" && other.tag != "Magic" && other.tag != "Player" && 
+            (transform.parent == null || transform.parent.name != "MagicHand"))
         {
             Destroy(gameObject);
+        }
+        
+        if (other.tag == "Wood")
+        {
             Destroy(other.gameObject);
         }
-        if(other.tag != "Huo" && other.tag != "Magic" && other.tag != "Player")
-            Destroy(gameObject);
     }
 
     public static bool Recognizer(List<List<Vector2>> positions)

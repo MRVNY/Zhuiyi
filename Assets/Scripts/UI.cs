@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using StarterAssets;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
@@ -20,10 +22,13 @@ public class UI : MonoBehaviour
     public static PlayerInput playerInput;
     public static StarterAssetsInputs starterAssetsInputs;
 
+    private Vector2 lastPenPos;
+
     private void Start()
     {
         WritingPanel = transform.GetChild(0).gameObject;
         DialogPanel = transform.GetChild(1).gameObject;
+        GamePanel = transform.GetChild(2).gameObject;
         //MenuPanel = transform.GetChild(2);
         
         if (Player == null)
@@ -54,6 +59,14 @@ public class UI : MonoBehaviour
         playerInput.enabled = true;
     }
 
+    public async static Task Damage()
+    {
+        Image View = GamePanel.GetComponent<Image>();
+        View.color = new Color(1, 0, 0, 0.5f);
+        await Task.Delay(1000);
+        View.color = new Color(0, 0, 0, 0);
+    }
+
     private void Update()
     {
         if (Input.anyKeyDown)
@@ -62,12 +75,41 @@ public class UI : MonoBehaviour
             {
                 toggleUI("Writing");
             }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                lastPenPos = Input.mousePosition;
+            }
         }
-        
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 diff = (Vector2)Input.mousePosition - lastPenPos;
+            starterAssetsInputs.look = new Vector2(diff.x, - diff.y) * 0.2f;
+                //Quaternion.Euler(Camera.main.transform.rotation.eulerAngles + new Vector3(-diff.y, diff.x, 0));
+            lastPenPos = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            starterAssetsInputs.look = Vector2.zero;
+        }
+
         if (currentUI != "Game" && !Input.anyKey)
         {
             toggleUI("Game");
         }
+        
+        // RaycastHit hit;
+        // Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 1));
+        //
+        // if (Physics.Raycast(ray, out hit))
+        // { 
+        //     GamePanel.transform.GetChild(0).position = Camera.main.WorldToScreenPoint(hit.point);
+        // }
+
+        // Camera.main.transform.rotation = Quaternion.Euler(Vector3.up);
+        // starterAssetsInputs.look = Vector2.up;
     }
 
     public static void toggleUI(string panel)
@@ -75,6 +117,7 @@ public class UI : MonoBehaviour
         currentUI = panel;
         WritingPanel.SetActive(false);
         DialogPanel.SetActive(false);
+        GamePanel.SetActive(false);
         
         switch (panel)
         {
@@ -92,6 +135,7 @@ public class UI : MonoBehaviour
                 //Pause();
                 break;
             case "Game":
+                GamePanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
                 Resume();
                 break;

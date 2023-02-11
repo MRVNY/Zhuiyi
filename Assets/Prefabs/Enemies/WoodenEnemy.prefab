@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 357088596554903870}
   - component: {fileID: 467637723012556705}
   - component: {fileID: 3233631024346026971}
+  - component: {fileID: 2984227706640051336}
   m_Layer: 0
   m_Name: WoodenEnemy
   m_TagString: Wood
@@ -1380,6 +1381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2f857d268834ea5ba1b52d069137bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Idle: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
+  Walk: {fileID: 9100000, guid: 75d3a58b3d7879f41926561701407a48, type: 2}
+  Run: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
+  Attack: {fileID: 9100000, guid: 441942176ee9a724b9afe936d1d03496, type: 2}
 --- !u!65 &3233631024346026971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1388,11 +1393,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6639986138712714839}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.45, y: 1.71, z: 0.25}
   m_Center: {x: 0, y: 0.89, z: 0}
+--- !u!54 &2984227706640051336
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639986138712714839}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6802098490726386267
 GameObject:
   m_ObjectHideFlags: 0

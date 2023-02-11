@@ -11,6 +11,10 @@ public class MagicHand : MonoBehaviour
     private Camera cam;
 
     public GameObject Huo;
+    public GameObject Shui;
+    public GameObject Feng;
+    public GameObject Gong;
+    public GameObject Wei;
 
     private void Awake()
     {
@@ -63,7 +67,7 @@ public class MagicHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale==1 && Input.GetMouseButtonDown(0) && ActiveMagic != null)
+        if (Time.timeScale==1 && Input.GetKeyDown(KeyCode.Space) && ActiveMagic != null)
         {
             Attack();
         }
