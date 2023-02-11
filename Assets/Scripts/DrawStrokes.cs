@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,22 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
     
     private GameObject currentLine;
     private UILineRenderer lineRenderer;
+    private List<UILineRenderer> lines = new List<UILineRenderer>();
     private List<List<Vector2>> Writings = new List<List<Vector2>>();
     private List<Vector2> points = new List<Vector2>();
     private int CurrentLine = 0;
     private Vector2 rectPos;
+
+    private void OnEnable()
+    {
+        Writings.Clear();
+        points.Clear();
+        foreach (var line in lines)
+        {
+            Destroy(line.gameObject);
+        }
+        lines.Clear();
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -42,8 +55,15 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(lineRenderer.Points.Length > 3) 
+        if (lineRenderer.Points.Length > 3)
+        {
             Writings.Add(lineRenderer.Points.ToList());
+            lines.Add(lineRenderer);
+        }
+        else
+        {
+            Destroy(currentLine);
+        }
         currentLine = null;
         points.Clear();
         
@@ -64,7 +84,12 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         }
         if (Writings.Count == 4)
         {
-            if (Huo.Recognizer(Writings)) print("HUO");
+            if (Huo.Recognizer(Writings))
+            {
+                print("HUO");
+                MagicHand.Instance.Activate("Huo");
+                MagicHand.Instance.Attack();
+            }
             if (Shui.Recognizer(Writings)) print("SHUI");
         }
     }
