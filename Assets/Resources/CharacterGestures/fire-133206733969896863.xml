@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Gesture Name = "fire">
+<Gesture Name = "huo">
 	<Stroke>
 		<Point X = "130" Y = "140" T = "0" Pressure = "0" />
 		<Point X = "141" Y = "153" T = "0" Pressure = "0" />

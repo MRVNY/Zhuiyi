@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Gesture Name = "wind">
+<Gesture Name = "feng">
 	<Stroke>
 		<Point X = "154" Y = "148" T = "0" Pressure = "0" />
 		<Point X = "151" Y = "167" T = "0" Pressure = "0" />

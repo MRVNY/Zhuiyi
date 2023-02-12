@@ -4,11 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CinemachineTarget
   - Huo
   - Wood
   - Env
   - CinemachineTarget
+  - Shui
+  - Wei
+  - Air
+  - Bubble
+  - Feng
+  - Gong
   layers:
   - Default
   - TransparentFX
@@ -16,7 +21,7 @@ TagManager:
   - Magic
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - Character
   - Ground

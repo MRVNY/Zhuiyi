@@ -27,9 +27,10 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private Gesture[] trainingSet = null;   // training set loaded from XML files
 
-    private string[] three_stokes = new[] { "defense", "bow" };
-    private string[] four_stokes = new[] { "fire", "water", "wind" };
-
+    // private string[] three_stokes = new[] { "defense", "bow" };
+    // private string[] four_stokes = new[] { "fire", "water", "wind" };
+    private string[] three_stokes = new[] { "wei", "gong" };
+    private string[] four_stokes = new[] { "huo", "shui", "feng" };
     private void Start()
     {
         trainingSet = LoadTrainingSet();
@@ -56,7 +57,6 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         float x = eventData.position.x - rectPos.x;
         float y = eventData.position.y - rectPos.y;
         points.Add(new Vector2(x, y));
-        allPoints.Add(new PDollarGestureRecognizer.Point(x, y, strokeIndex));
         RefreshLine();
     }
 
@@ -77,7 +77,6 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         allPoints.Add(new PDollarGestureRecognizer.Point(x, y, strokeIndex));
         //Debug.Log("strokeIndex:" + strokeIndex);
         RefreshLine();
-        strokeIndex++;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -86,6 +85,11 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         {
             Writings.Add(lineRenderer.Points.ToList());
             lines.Add(lineRenderer);
+            foreach (var point in lineRenderer.Points)
+            {
+                allPoints.Add(new PDollarGestureRecognizer.Point(point.x, point.y, strokeIndex));
+            }
+            strokeIndex++;
         }
         else
         {
@@ -118,17 +122,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
             {
                 GiveFeedback(true);
                 Debug.Log(gestureClass + ": " + score);
-
-                switch (gestureClass)
-                {
-                    case "fire":
-                        MagicHand.Instance.Activate("Huo");
-                        break;
-                    case "water":
-                        MagicHand.Instance.Activate("Shui");
-                        break;
-
-                }
+                MagicHand.Instance.Activate(gestureClass);
             }
         }         
 
