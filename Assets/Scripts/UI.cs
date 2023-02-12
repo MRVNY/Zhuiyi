@@ -24,6 +24,9 @@ public class UI : MonoBehaviour
     public static StarterAssetsInputs starterAssetsInputs;
 
     private Vector2 lastPenPos;
+    
+    public static bool damage = false;
+    public static Task damaging;
 
     private void Start()
     {
@@ -65,14 +68,20 @@ public class UI : MonoBehaviour
 
     public async static Task Damage()
     {
+        damage = false;
         Image View = GamePanel.GetComponent<Image>();
         View.color = new Color(1, 0, 0, 0.5f);
         await Task.Delay(1000);
-        View.color = new Color(0, 0, 0, 0);
+        if(!damage) View.color = new Color(0, 0, 0, 0);
+        
+        damaging = null;
     }
 
     private void Update()
     {
+        if(damage && damaging == null)
+            damaging = Damage();
+
         if (Input.anyKeyDown)
         {
             if (Input.GetKeyDown(KeyCode.E))

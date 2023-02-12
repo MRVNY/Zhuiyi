@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Magic : MonoBehaviour
 {
-    protected List<string> dontDestroy = new List<string>(){"Magic", "Player"};
+    protected List<string> dontDestroy = new List<string>(){"Magic", "Player", "Hazard"};
     protected List<string> canDestroy = new List<string>();
     protected bool isOriginal = false;
 

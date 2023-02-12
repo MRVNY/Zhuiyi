@@ -27,10 +27,10 @@ public class Wei : Magic
         gameObject.SetActive(false);
     }
     
-    private Task PlayAnim(string animName)
+    private async Task PlayAnim(string animName)
     {
         anim.Play(animName);
-        return Task.Delay(2000);
+        await Task.Delay(TimeSpan.FromSeconds(anim.GetCurrentAnimatorStateInfo(0).length));
     }
 
     private async void OnCollisionEnter(Collision collision)

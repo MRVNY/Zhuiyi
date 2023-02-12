@@ -14,6 +14,8 @@ TagManager:
   - Bubble
   - Feng
   - Gong
+  - Hazard
+  - Magic
   layers:
   - Default
   - TransparentFX

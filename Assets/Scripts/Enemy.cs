@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        if (tag != "Bubble")
+        if (tag != "Bubble" && tag != "Hazard")
         {
             animator = GetComponent<Animator>();
             animator.runtimeAnimatorController = Idle;
@@ -27,26 +27,27 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        if (!blocked && Vector3.Distance(transform.position, FirstPersonController.Instance.transform.position) <
-            20)
+        if (tag != "Hazard")
         {
-            if(tag!="Bubble") animator.runtimeAnimatorController = Walk;
-            transform.position = Vector3.MoveTowards(transform.position,
-                FirstPersonController.Instance.transform.position, 0.01f);
-            transform.rotation =
-                Quaternion.LookRotation(FirstPersonController.Instance.transform.position - transform.position);
-        }
-        else
-        {
-            if(tag!="Bubble") animator.runtimeAnimatorController = Idle;
-        }
+            if (!blocked && Vector3.Distance(transform.position, FirstPersonController.Instance.transform.position) <
+                20)
+            {
+                if (tag != "Bubble") animator.runtimeAnimatorController = Walk;
+                transform.position = Vector3.MoveTowards(transform.position,
+                    FirstPersonController.Instance.transform.position, 0.01f);
+                transform.rotation =
+                    Quaternion.LookRotation(FirstPersonController.Instance.transform.position - transform.position);
+            }
+            else
+            {
+                if (tag != "Bubble") animator.runtimeAnimatorController = Idle;
+            }
 
-        if (blocked)
-        {
-            StartCoroutine(WaitToUnblock());
+            if (blocked)
+            {
+                StartCoroutine(WaitToUnblock());
+            }
         }
-
     }
     
     IEnumerator WaitToUnblock()
@@ -57,11 +58,22 @@ public class Enemy : MonoBehaviour
 
     private async void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && tag != "Hazard")
         {
-            Task damage = UI.Damage();
-            Destroy(gameObject);
-            await damage;
+            UI.damage = true;
+        }
+    }
+    
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && tag == "Hazard")
+        {
+            bool checkShield = MagicHand.Instance.Wei.gameObject.activeSelf;
+            if (!checkShield)
+            {
+                UI.damage = true;
+            }
         }
     }
 

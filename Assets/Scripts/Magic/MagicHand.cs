@@ -29,8 +29,9 @@ public class MagicHand : MonoBehaviour
         Gong = GetComponentInChildren<Gong>().gameObject;
         
         cam = Camera.main;
+        Wei.SetActive(false);
         Activate("");
-        //Activate("gong");
+        //Activate("wei");
     }
 
     public void Activate(string magicName)
@@ -40,7 +41,7 @@ public class MagicHand : MonoBehaviour
         Shui.SetActive(false);
         Feng.SetActive(false);
         Gong.transform.parent.gameObject.SetActive(false);
-        Wei.SetActive(false);
+        //Wei.SetActive(false);
         
         switch (magicName)
         {
