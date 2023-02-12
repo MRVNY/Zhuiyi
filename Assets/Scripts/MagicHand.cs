@@ -30,15 +30,19 @@ public class MagicHand : MonoBehaviour
     }
 
     public void Activate(string magicName)
-    {
+    {   
+        bool activate = false;
         switch (magicName)
         {
             case "Huo":
                 ActiveMagic = Huo;
+                activate = true;
                 break;
         }
         
-        ActiveMagic.SetActive(true);
+        if (activate){
+            ActiveMagic.SetActive(true);
+        }
     }
 
     public void Attack()

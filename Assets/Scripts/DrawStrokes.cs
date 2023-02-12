@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Xml;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI.Extensions;
+using PDollarGestureRecognizer;
 
 public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -13,15 +16,31 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
     private GameObject currentLine;
     private UILineRenderer lineRenderer;
     private List<UILineRenderer> lines = new List<UILineRenderer>();
+    
     private List<List<Vector2>> Writings = new List<List<Vector2>>();
     private List<Vector2> points = new List<Vector2>();
-    private int CurrentLine = 0;
+
+    private int strokeIndex = 0;
+    List<PDollarGestureRecognizer.Point> allPoints = new List<PDollarGestureRecognizer.Point>();
+
     private Vector2 rectPos;
+
+    private Gesture[] trainingSet = null;   // training set loaded from XML files
+
+    private void Start()
+    {
+        trainingSet = LoadTrainingSet();
+    }
 
     private void OnEnable()
     {
+
+        strokeIndex = 0;
+        allPoints.Clear();
+
         Writings.Clear();
         points.Clear();
+        
         foreach (var line in lines)
         {
             Destroy(line.gameObject);
@@ -31,7 +50,10 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     public void OnDrag(PointerEventData eventData)
     {
-        points.Add(new Vector2(eventData.position.x - rectPos.x, eventData.position.y - rectPos.y));
+        float x = eventData.position.x - rectPos.x;
+        float y = eventData.position.y - rectPos.y;
+        points.Add(new Vector2(x, y));
+        allPoints.Add(new PDollarGestureRecognizer.Point(x, y, strokeIndex));
         RefreshLine();
     }
 
@@ -45,12 +67,15 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         currentLine = Instantiate(linePrefab, new Vector3(0,0,0), Quaternion.identity);
         currentLine.transform.SetParent(transform);
         lineRenderer = currentLine.GetComponent<UILineRenderer>();
-        List<Vector2> tmpList = new List<Vector2>();
-        points = new List<Vector2>();
-        points.Add(new Vector2(eventData.position.x - rectPos.x, eventData.position.y - rectPos.y));
-        // points.Add(new Vector2(eventData.position.x - rectPos.x, eventData.position.y - rectPos.y));
+        
+        strokeIndex++;
+
+        float x = eventData.position.x - rectPos.x;
+        float y = eventData.position.y - rectPos.y;
+        points.Add(new Vector2(x, y));
+        allPoints.Add(new PDollarGestureRecognizer.Point(x, y, strokeIndex));
+        Debug.Log("strokeIndex:" + strokeIndex);
         RefreshLine();
-        //CurrentLine = 0;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -78,21 +103,101 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private void Recognize()
     {
-        if (Writings.Count == 3)
-        {
-            
-        }
-        if (Writings.Count == 4)
-        {
-            if (Huo.Recognizer(Writings))
+        // TODO: Remove if once we are properly managing the canvas reset
+        if (strokeIndex == 4){
+            Gesture candidate = new Gesture(allPoints.ToArray());
+            string gestureClass = PointCloudRecognizer.Classify(candidate, trainingSet);
+            Debug.Log("Recognized as: " + gestureClass);
+
+            switch (gestureClass)
             {
-                foreach (var line in lines)
-                {
-                    line.color = Color.green;
-                }
-                MagicHand.Instance.Activate("Huo");
+                case "fire":
+                    MagicHand.Instance.Activate("Huo");
+                    GiveFeedback(true);
+                    break;
+                case "water":
+                    MagicHand.Instance.Activate("Shui");
+                    GiveFeedback(true);
+                    break;
+
+            } 
+        }         
+
+    }
+
+    private void GiveFeedback(bool correct)
+    {
+        if (correct){
+            foreach (var line in lines)
+            {
+                line.color = Color.green;
             }
-            if (Shui.Recognizer(Writings)) print("SHUI");
         }
+    }
+
+    /// <summary>
+    /// Loads training gesture samples from XML files
+    /// </summary>
+    /// <returns></returns>
+    private Gesture[] LoadTrainingSet()
+    {
+        List<Gesture> gestures = new List<Gesture>();
+        UnityEngine.Object[] xmlFiles = Resources.LoadAll("CharacterGestures", typeof(TextAsset));
+
+        foreach (TextAsset textAsset in xmlFiles)
+        {
+            gestures.Add(ReadGesture(textAsset));
+        }
+
+        return gestures.ToArray();
+    }
+
+    /// <summary>
+    /// Reads a multistroke gesture from an XML file
+    /// </summary>
+    /// <param name="fileName"></param>
+    /// <returns></returns>
+    public static Gesture ReadGesture(TextAsset xmlFile)
+    {
+        MemoryStream assetStream = new MemoryStream(xmlFile.bytes);
+        XmlReader xmlReader = XmlReader.Create(assetStream);
+        List<Point> xmlPoints = new List<Point>();
+        int currentStrokeIndex = -1;
+        string gestureName = "";
+        
+        try
+        {
+            while (xmlReader.Read())
+            {
+                if (xmlReader.NodeType != XmlNodeType.Element) continue;
+                switch (xmlReader.Name)
+                {
+                    case "Gesture":
+                        gestureName = xmlReader["Name"];
+                        if (gestureName.Contains("~")) // '~' character is specific to the naming convention of the MMG set
+                            gestureName = gestureName.Substring(0, gestureName.LastIndexOf('~'));
+                        if (gestureName.Contains("_")) // '_' character is specific to the naming convention of the MMG set
+                            gestureName = gestureName.Replace('_', ' ');
+                        break;
+                    case "Stroke":
+                        currentStrokeIndex++;
+                        break;
+                    case "Point":
+                        xmlPoints.Add(new Point(
+                            float.Parse(xmlReader["X"]),
+                            float.Parse(xmlReader["Y"]),
+                            currentStrokeIndex
+                        ));
+                        break;
+                }
+            }
+        }
+        finally
+        {
+            if (xmlReader != null)
+                xmlReader.Close();
+        }
+
+        return new Gesture(xmlPoints.ToArray(), gestureName);
     }
 }
