@@ -15,6 +15,7 @@ public class UI : MonoBehaviour
     public static GameObject DialogPanel;
     public static GameObject MenuPanel;
     public static GameObject GamePanel;
+    public static GameObject Grimoire;
     private static string currentUI;
 
     public GameObject Player;
@@ -30,7 +31,10 @@ public class UI : MonoBehaviour
         DialogPanel = transform.GetChild(1).gameObject;
         GamePanel = transform.GetChild(2).gameObject;
         //MenuPanel = transform.GetChild(2);
-        
+        Grimoire = WritingPanel.GetComponentInChildren<VerticalLayoutGroup>().gameObject;
+
+
+
         if (Player == null)
         {
             Player = GameObject.Find("PlayerCapsule");
@@ -73,16 +77,20 @@ public class UI : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                toggleUI("Writing");
+                if (currentUI == "Game") toggleUI("Writing");
+                else if (currentUI == "Writing") toggleUI("Game");
             }
 
+            if (Input.GetKeyDown(KeyCode.Q))
+                Grimoire.SetActive(!Grimoire.activeSelf);
+
+            // Wacom view panning
             if (Input.GetMouseButtonDown(0))
-            {
                 lastPenPos = Input.mousePosition;
-            }
         }
 
-        if (Input.GetMouseButton(0))
+        // Wacom view panning
+        else if (Input.GetMouseButton(0))
         {
             Vector2 diff = (Vector2)Input.mousePosition - lastPenPos;
             starterAssetsInputs.look = new Vector2(diff.x, - diff.y) * 0.2f;
@@ -90,16 +98,17 @@ public class UI : MonoBehaviour
             lastPenPos = Input.mousePosition;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0))
         {
             starterAssetsInputs.look = Vector2.zero;
         }
 
-        if (currentUI != "Game" && !Input.anyKey)
-        {
-            toggleUI("Game");
-        }
+        // if (currentUI != "Game" && !Input.anyKey)
+        // {
+        //     toggleUI("Game");
+        // }
         
+        //Auto aim?
         // RaycastHit hit;
         // Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 1));
         //
@@ -123,6 +132,7 @@ public class UI : MonoBehaviour
         {
             case "Writing":
                 Cursor.lockState = CursorLockMode.None;
+                Grimoire.SetActive(false);
                 WritingPanel.SetActive(true);
                 Pause();
                 break;

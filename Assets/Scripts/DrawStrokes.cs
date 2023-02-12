@@ -27,6 +27,9 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private Gesture[] trainingSet = null;   // training set loaded from XML files
 
+    private string[] three_stokes = new[] { "defense", "bow" };
+    private string[] four_stokes = new[] { "fire", "water", "wind" };
+
     private void Start()
     {
         trainingSet = LoadTrainingSet();
@@ -67,15 +70,14 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         currentLine = Instantiate(linePrefab, new Vector3(0,0,0), Quaternion.identity);
         currentLine.transform.SetParent(transform);
         lineRenderer = currentLine.GetComponent<UILineRenderer>();
-        
-        strokeIndex++;
 
         float x = eventData.position.x - rectPos.x;
         float y = eventData.position.y - rectPos.y;
         points.Add(new Vector2(x, y));
         allPoints.Add(new PDollarGestureRecognizer.Point(x, y, strokeIndex));
-        Debug.Log("strokeIndex:" + strokeIndex);
+        //Debug.Log("strokeIndex:" + strokeIndex);
         RefreshLine();
+        strokeIndex++;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -104,23 +106,30 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
     private void Recognize()
     {
         // TODO: Remove if once we are properly managing the canvas reset
-        if (strokeIndex == 4){
+        if (strokeIndex >= 3){
             Gesture candidate = new Gesture(allPoints.ToArray());
-            string gestureClass = PointCloudRecognizer.Classify(candidate, trainingSet);
-            Debug.Log("Recognized as: " + gestureClass);
-
-            switch (gestureClass)
+            (string,float) output = PointCloudRecognizer.Classify(candidate, trainingSet);
+            
+            string gestureClass = output.Item1;
+            float score = output.Item2;
+            
+            if ((three_stokes.Contains(gestureClass) && strokeIndex == 3) || 
+                (four_stokes.Contains(gestureClass) && strokeIndex == 4))
             {
-                case "fire":
-                    MagicHand.Instance.Activate("Huo");
-                    GiveFeedback(true);
-                    break;
-                case "water":
-                    MagicHand.Instance.Activate("Shui");
-                    GiveFeedback(true);
-                    break;
+                GiveFeedback(true);
+                Debug.Log(gestureClass + ": " + score);
 
-            } 
+                switch (gestureClass)
+                {
+                    case "fire":
+                        MagicHand.Instance.Activate("Huo");
+                        break;
+                    case "water":
+                        MagicHand.Instance.Activate("Shui");
+                        break;
+
+                }
+            }
         }         
 
     }
@@ -185,7 +194,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
                     case "Point":
                         xmlPoints.Add(new Point(
                             float.Parse(xmlReader["X"]),
-                            float.Parse(xmlReader["Y"]),
+                            -float.Parse(xmlReader["Y"]),
                             currentStrokeIndex
                         ));
                         break;

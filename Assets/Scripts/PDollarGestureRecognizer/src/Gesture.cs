@@ -58,6 +58,7 @@
  * SUCH DAMAGE.
 **/
 using System;
+using UnityEngine;
 
 namespace PDollarGestureRecognizer
 {
@@ -65,7 +66,7 @@ namespace PDollarGestureRecognizer
     /// Implements a gesture as a cloud of points (i.e., an unordered set of points).
     /// Gestures are normalized with respect to scale, translated to origin, and resampled into a fixed number of 32 points.
     /// </summary>
-    public class Gesture
+    public class Gesture// : MonoBehaviour
     {
         public Point[] Points = null;            // gesture points (normalized)
         public string Name = "";                 // gesture class
@@ -83,6 +84,13 @@ namespace PDollarGestureRecognizer
             this.Points = Scale(points);
             this.Points = TranslateTo(Points, Centroid(Points));
             this.Points = Resample(Points, SAMPLING_RESOLUTION);
+
+            //Debug Stokes, in order to do this, inherit MonoBehavior
+            // for (int i = 0; i < Points.Length - 1; i++)
+            // {
+            //     if(Points[i].StrokeID == Points[i+1].StrokeID)
+            //         Debug.DrawLine(new Vector3(Points[i].X,Points[i].Y) * 10, new Vector3(Points[i+1].X,Points[i+1].Y) * 10, Color.red, 5f);
+            // }
         }
 
         #region gesture pre-processing steps: scale normalization, translation to origin, and resampling

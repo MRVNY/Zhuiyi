@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - CinemachineTarget
   - Huo
   - Wood
   - Env
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX

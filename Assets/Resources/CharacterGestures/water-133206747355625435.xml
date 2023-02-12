@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Gesture Name = "water">
+	<Stroke>
+		<Point X = "166" Y = "151" T = "0" Pressure = "0" />
+		<Point X = "166" Y = "150" T = "0" Pressure = "0" />
+		<Point X = "166" Y = "152" T = "0" Pressure = "0" />
+		<Point X = "170" Y = "166" T = "0" Pressure = "0" />
+		<Point X = "178" Y = "205" T = "0" Pressure = "0" />
+		<Point X = "181" Y = "224" T = "0" Pressure = "0" />
+		<Point X = "182" Y = "239" T = "0" Pressure = "0" />
+		<Point X = "181" Y = "240" T = "0" Pressure = "0" />
+		<Point X = "174" Y = "237" T = "0" Pressure = "0" />
+		<Point X = "169" Y = "233" T = "0" Pressure = "0" />
+		<Point X = "167" Y = "229" T = "0" Pressure = "0" />
+	</Stroke>
+	<Stroke>
+		<Point X = "150" Y = "187" T = "0" Pressure = "0" />
+		<Point X = "156" Y = "186" T = "0" Pressure = "0" />
+		<Point X = "164" Y = "185" T = "0" Pressure = "0" />
+		<Point X = "170" Y = "184" T = "0" Pressure = "0" />
+		<Point X = "172" Y = "184" T = "0" Pressure = "0" />
+		<Point X = "172" Y = "185" T = "0" Pressure = "0" />
+		<Point X = "170" Y = "190" T = "0" Pressure = "0" />
+		<Point X = "162" Y = "207" T = "0" Pressure = "0" />
+		<Point X = "154" Y = "221" T = "0" Pressure = "0" />
+		<Point X = "150" Y = "225" T = "0" Pressure = "0" />
+		<Point X = "149" Y = "224" T = "0" Pressure = "0" />
+	</Stroke>
+	<Stroke>
+		<Point X = "203" Y = "170" T = "0" Pressure = "0" />
+		<Point X = "194" Y = "182" T = "0" Pressure = "0" />
+		<Point X = "184" Y = "193" T = "0" Pressure = "0" />
+		<Point X = "181" Y = "196" T = "0" Pressure = "0" />
+		<Point X = "178" Y = "196" T = "0" Pressure = "0" />
+	</Stroke>
+	<Stroke>
+		<Point X = "176" Y = "191" T = "0" Pressure = "0" />
+		<Point X = "186" Y = "199" T = "0" Pressure = "0" />
+		<Point X = "201" Y = "207" T = "0" Pressure = "0" />
+		<Point X = "213" Y = "214" T = "0" Pressure = "0" />
+		<Point X = "217" Y = "216" T = "0" Pressure = "0" />
+		<Point X = "219" Y = "217" T = "0" Pressure = "0" />
+	</Stroke>
+</Gesture>
