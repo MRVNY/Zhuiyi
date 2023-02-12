@@ -1,0 +1,851 @@
+fileFormatVersion: 2
+guid: ce85963e0b1ae48f28b9325ed80cd224
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gong_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3969f8870a92b4db6961148ff16efe37
+      internalID: -2074271802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3905bc7474da495f95822a0e31cac9e
+      internalID: -378301430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2216fd1ce284448f4a4fc4216d7aa05e
+      internalID: 1261961334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d579eeb37b9c4e1cb39a1e4d47329d8
+      internalID: 1451584249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce3358ba068e4ce5bad481117e4ca95
+      internalID: -535809735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56c1d42d8a1e4b6db0dc347895a28c8
+      internalID: 476136871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acff94b8cbcc49c0b78f1b82fb1776c
+      internalID: -500502846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd403caa2ea824140a861e6f6b3c3728
+      internalID: -292272753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a761275ebcb5417bbbbcdfb15ddb468
+      internalID: -2044543219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_9
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25eebed97ee5241a9bf3a9f256df4980
+      internalID: 1323265653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8db57cfc48649079249ed544a61859
+      internalID: 1448146229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2d90b84058e4dfea3fe673884a8dfa
+      internalID: 1587193873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5856b65f664574076aa1e6ddfd925b87
+      internalID: -505795994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de2d63c8725a4069be8d977850ca92c
+      internalID: 1192873833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eefadbc52b8e4fbc955f643e8cb8a63
+      internalID: -829511460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce133cd2b5472454c9bf2a65d6dae9e6
+      internalID: 1516985302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca83ccd9b363f4220837e7cfcea61d27
+      internalID: 1485073267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d141a1e5a683e45f7b13c821721abfdb
+      internalID: 492975207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67311ec2b15654c269f01256a0913c3d
+      internalID: 1012291265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_19
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2175c1e943e46608f8fc20a03f5505
+      internalID: -1648297307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630c2d309f8ff42338f6ed2a8492e43b
+      internalID: -51651344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b18285094a044f485915cc00672d1f
+      internalID: 747901346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74152c59562364082ad461b36fb17031
+      internalID: -933901566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ceba463c41f4713a7b16979f2769d2
+      internalID: -216948946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ccb0fe7c8c644ad863f22eedec8caf
+      internalID: 235153251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f8a95721b5f4916a14b8e23a2a6956
+      internalID: 1730928744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7597ee59a22634ec9812f9dac7883022
+      internalID: 821458056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_27
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea5ff2384cfc42b698620c6027fdb6f
+      internalID: -1174373384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836165f37ffe2456bbbd3a3e39ff8bcc
+      internalID: 674049003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e8128541adf4e1d82afb23ac0ecd73
+      internalID: -594574250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c11e5f8c59eb4c6ba963566f9d785af
+      internalID: 7748228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877b58df81ec04318b2bc0375e1d61ae
+      internalID: -2132760643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gong_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8461dbd31314e97a3e66c0b5022be5
+      internalID: 1684979043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6936a9621d3da4c1a842c02910957b1f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gong_3: 1451584249
+      gong_20: -51651344
+      gong_21: 747901346
+      gong_34: 837123096
+      gong_6: -500502846
+      gong_7: -292272753
+      gong_9: 1323265653
+      gong_29: -594574250
+      gong_10: 1448146229
+      gong_23: -216948946
+      gong_26: 821458056
+      gong_27: -1174373384
+      gong_19: -1648297307
+      gong_28: 674049003
+      gong_12: -505795994
+      gong_5: 476136871
+      gong_30: 7748228
+      gong_13: 1192873833
+      gong_2: 1261961334
+      gong_8: -2044543219
+      gong_15: 1516985302
+      gong_0: -2074271802
+      gong_18: 1012291265
+      gong_25: 1730928744
+      gong_11: 1587193873
+      gong_14: -829511460
+      gong_17: 492975207
+      gong_32: 1684979043
+      gong_4: -535809735
+      gong_1: -378301430
+      gong_31: -2132760643
+      gong_24: 235153251
+      gong_22: -933901566
+      gong_33: -1373933373
+      gong_16: 1485073267
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

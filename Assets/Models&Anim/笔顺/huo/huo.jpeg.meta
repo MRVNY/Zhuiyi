@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: 844dccd86adde4f3ea7c7655e57b99aa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: huo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13824
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef0a096d012542a58415c26849a1b51
+      internalID: -1515369072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13312
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f380593d92b024be5ab4bce65d781bab
+      internalID: 1588287582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12800
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4cb2f9284394ac09927da179bb8bd5
+      internalID: 351917081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12288
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3349c4e7c20e34c45ba4fbd826cd7856
+      internalID: 1815203104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11776
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fda330089d44fdab0ac7a6dd96b195
+      internalID: -1699312042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11264
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e8bc8707e3c4941b17b424237c36e7
+      internalID: -351037879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10752
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a91f942d84f42f6a8fc7b46c6742d1
+      internalID: -1778479591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10240
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6c9373a89cd44d7adf5c7deae1a86b
+      internalID: -871011692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9728
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab81d3f63df4496dbfdd546603b33d1
+      internalID: -1920092292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9216
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a881115e89b234a938e32aa535af2f02
+      internalID: -2049621810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8704
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaebdbd57cba9465cb51adc1752ecbe6
+      internalID: -773620306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8192
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54adbf34ab524421b787a5a60e7a959
+      internalID: 65880692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7680
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5251827b2ee104b21baea0a0e51a4a53
+      internalID: 2069375168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7168
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25359be706c0949b7b98d8acf6075f29
+      internalID: 932531742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6656
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4330aeb53392d46b6b863bbadaf2d518
+      internalID: -78297900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6144
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa55bfc3841e477295bc7dc377f2b42
+      internalID: -1801132457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5632
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78760edd011bd4fcb9e219cebafb66f2
+      internalID: 73019503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5120
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56b1a5e76d6946319b51db441406221
+      internalID: 1319086373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4608
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64afe77d758b64121a9e8c178f42f25f
+      internalID: 1386874412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24085214a48c94bbaa003db17b6c5402
+      internalID: -14379643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c71a37d9f314666b5a7b3541427f1b
+      internalID: -1728676791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263f9e80793c04ddfb340da4bca2d6c0
+      internalID: 1225833973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4566aec28f8fa4e309bbe31cef43e8b6
+      internalID: 1732767634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dad332f086e40c080667c6addea4ee
+      internalID: -35955071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a942bbb3dff4647b8a0865c4559959bd
+      internalID: 619259930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56255ad39fdd4cb7810301b2024ada0
+      internalID: -438917021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da31c9f733b754720ab3f3729609a710
+      internalID: -1739528189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huo_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2693bd2711c4f89be9a9c8f470230f
+      internalID: 1491837630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f19f360ab41964f47b9d872928afbfca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      huo_26: -1739528189
+      huo_6: -1778479591
+      huo_10: -773620306
+      huo_22: 1732767634
+      huo_9: -2049621810
+      huo_16: 73019503
+      huo_11: 65880692
+      huo_1: 1588287582
+      huo_15: -1801132457
+      huo_18: 1386874412
+      huo_3: 1815203104
+      huo_12: 2069375168
+      huo_25: -438917021
+      huo_4: -1699312042
+      huo_7: -871011692
+      huo_8: -1920092292
+      huo_24: 619259930
+      huo_20: -1728676791
+      huo_14: -78297900
+      huo_13: 932531742
+      huo_5: -351037879
+      huo_17: 1319086373
+      huo_0: -1515369072
+      huo_2: 351917081
+      huo_27: 1491837630
+      huo_21: 1225833973
+      huo_19: -14379643
+      huo_23: -35955071
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

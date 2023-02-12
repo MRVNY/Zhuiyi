@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: c11d609d8cc8148d09da0d5d8b1000de
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wei_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74102e5d18a44d1d9356fe0596a1000
+      internalID: -193191949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13b3b6d948914591b39161bc6ce030c
+      internalID: -27233493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4785ced12a44a0f882f76f75189f46
+      internalID: -879695945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c5684bf25a3444db422668d94beadc
+      internalID: -1832346539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94eb9c6ad01e74b298e6ec1e5f759323
+      internalID: -298600344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761374e8344434d5ba8fc6a7ae000459
+      internalID: -785461251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2012ce5ed984df0be07399c3c476e3
+      internalID: -1065105278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8543f9b702d4093a7c047571eca581
+      internalID: 1682862409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c6363031adb428ab4a99cef62bf650
+      internalID: -1597696077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_9
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cf62ef8fc2a401fb8918133f42033a
+      internalID: -1752999071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3b31f54b3444ac1904470574c59284
+      internalID: 495755461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8118f294521594b5c9dea0b14939da01
+      internalID: -688197323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33491300943148e6bd2a68586ff9b6e
+      internalID: 1037360527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699853ba45f8449ff9e5e440fb373ce6
+      internalID: 1124015110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c772d59e848469c93eb3ed55c73e7e
+      internalID: -1116710684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb041ded3dd87476c9623444d6cadcdc
+      internalID: -1136151391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0745b89262a26467babef21b4d8c626f
+      internalID: 22087397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501b0156745674faf9584d21ec11f691
+      internalID: -229248173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2970150a6f708497aa04ce82d5159729
+      internalID: 860283603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_19
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db643b9d376e141778c7d5a32f15c20b
+      internalID: 1781205459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791b6247e3aa3430db22f726e78f275f
+      internalID: 923732802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fac3a872fdb4a3ead6a4b1453cfb9d
+      internalID: 498806465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a061224de6144724a706f136fa7b9ba
+      internalID: 2064775480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af9eb60e8799411aa4186da36a0fd06
+      internalID: -1296003182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6165f079459a44af8b61be0cf25858b
+      internalID: -1144588196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ba4a5d6c4aa414f84b1b8e6978e745
+      internalID: 138875292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9171dd69969d1432783ec469bb615e91
+      internalID: 2076585668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_27
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b85d0674045e4062b0fca9ded94c2e3
+      internalID: -1673172257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6913fb44ad348e29d6dfc05f94b935
+      internalID: -1488942309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8fbcc2c400e4434a7c52e42d06fade
+      internalID: 1929171582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc2d210bebed459fa32ba886419fd9a
+      internalID: 72763706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b65bc70d70f45d6a023e72ad34864d
+      internalID: -1767624322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b150cb07543404fa13937d8eb48322
+      internalID: 350039395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_33
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937fccde7da544566b87510c26ad8885
+      internalID: 61827822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wei_34
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1270d9183903e4be291c73aecf0a43b5
+      internalID: 459954520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b993092b5ef9f4be0a72ad0bb047608b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wei_10: 495755461
+      wei_16: 22087397
+      wei_6: -1065105278
+      wei_11: -688197323
+      wei_1: -27233493
+      wei_31: -1767624322
+      wei_26: 2076585668
+      wei_15: -1136151391
+      wei_14: -1116710684
+      wei_8: -1597696077
+      wei_17: -229248173
+      wei_19: 1781205459
+      wei_33: 61827822
+      wei_25: 138875292
+      wei_27: -1673172257
+      wei_34: 459954520
+      wei_28: -1488942309
+      wei_12: 1037360527
+      wei_23: -1296003182
+      wei_30: 72763706
+      wei_32: 350039395
+      wei_9: -1752999071
+      wei_13: 1124015110
+      wei_0: -193191949
+      wei_2: -879695945
+      wei_22: 2064775480
+      wei_3: -1832346539
+      wei_4: -298600344
+      wei_7: 1682862409
+      wei_29: 1929171582
+      wei_24: -1144588196
+      wei_18: 860283603
+      wei_21: 498806465
+      wei_20: 923732802
+      wei_5: -785461251
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

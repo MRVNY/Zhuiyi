@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 5ed6b6743fa9a44de833a731abdb7028
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shui_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced28a6f138b642ad8cc49d146aad6d6
+      internalID: 291202160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c551eaea3384c5286bf4c9dcd25238
+      internalID: 1675346375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedaddadf9b3844f8847365abc769237
+      internalID: 477161045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8749f760eb557433494264d3d80a7d05
+      internalID: -1526995137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3dd29fb1ff34f869b4afcc4e4b2af7
+      internalID: 1134622248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81cab47e451246b1a0da4c3d602fe36
+      internalID: -1081784862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdc173521514484786898c5820967cb
+      internalID: -2004029861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a0e1b9cfeca41359b0b3a92e91b9ad
+      internalID: 1049904666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87331d417cc444536939b7fc8a7518d1
+      internalID: -733909079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_9
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d2928be6d2a4e6cabd54e362cead47
+      internalID: -1155218295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62529c3e7a83e45778003a7d333d0995
+      internalID: -529711303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00648adbb236744918b55ebab4db99f6
+      internalID: -1266734563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748544b032d4948a8867004c86b07adb
+      internalID: -1756604296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc033499cee664fa583de5e6efef1bbf
+      internalID: -621498588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd80225e77524498280b2067fb8b89dd
+      internalID: -2096994085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9e81e7d41bb409f9de28ed7fd549e7
+      internalID: -1063311446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7848a1a037c184a0486cddddc376bb9c
+      internalID: -1801994976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b395330afdc7426c8caf2024115b74b
+      internalID: -916098177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b007c8b2354142608570159d12c8abc
+      internalID: 402852464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_19
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5948b6d5b85842b3bf0fc987c505023
+      internalID: 148140271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053f7c26163d74cd99ffac3f894f4976
+      internalID: 703822540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01902091614c34343857e608259cb10e
+      internalID: 1345493755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bddae2188dd4f7fabf54addf26b697
+      internalID: -1170069559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9291a925b322495aba15bfa95d86daf
+      internalID: 787287402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036a7e6dbcde74d5f916a81d6fc025a9
+      internalID: -1127512298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4602b6e51ebc1487a92ac3ebe7b6aa97
+      internalID: 256504209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cd41bd4d0a0498b8743496661f3a6b
+      internalID: 684798241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_27
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa20f2367cd04288950c87fbf494b5e
+      internalID: -1235743145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca442b99362a468a9eb1830c07f652c
+      internalID: -66089577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6826d1586994a149be34a7063cb332
+      internalID: 1555295068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366a2dd070c7f4112b811b6cfd46c921
+      internalID: -1411210667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26c4e43a1aea490b9c6d03a27ef164e
+      internalID: -1321704189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e714901449eb40a8b1959c01bcc2472
+      internalID: -1499498380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_33
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820ed27c265f04599b767cec4a504cfd
+      internalID: 1418768955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_34
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b28f7677e9d449b2922b6510dec6355
+      internalID: -115069829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shui_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d57a175f0134d5eb76c7b874057da5
+      internalID: 123217749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 23961428788ca44118d78c5ad9a88f26
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      shui_21: 1345493755
+      shui_31: -1321704189
+      shui_30: -1411210667
+      shui_6: -2004029861
+      shui_0: 291202160
+      shui_16: -1801994976
+      shui_32: -1499498380
+      shui_36: -836694229
+      shui_2: 477161045
+      shui_28: -66089577
+      shui_4: 1134622248
+      shui_29: 1555295068
+      shui_39: -106606415
+      shui_17: -916098177
+      shui_12: -1756604296
+      shui_7: 1049904666
+      shui_24: -1127512298
+      shui_25: 256504209
+      shui_8: -733909079
+      shui_37: -1376460390
+      shui_23: 787287402
+      shui_33: 1418768955
+      shui_3: -1526995137
+      shui_34: -115069829
+      shui_10: -529711303
+      shui_38: -1878967117
+      shui_26: 684798241
+      shui_14: -2096994085
+      shui_20: 703822540
+      shui_35: 123217749
+      shui_11: -1266734563
+      shui_22: -1170069559
+      shui_9: -1155218295
+      shui_27: -1235743145
+      shui_15: -1063311446
+      shui_18: 402852464
+      shui_5: -1081784862
+      shui_1: 1675346375
+      shui_13: -621498588
+      shui_19: 148140271
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
