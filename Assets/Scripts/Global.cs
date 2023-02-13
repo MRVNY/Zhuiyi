@@ -8,6 +8,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 [Serializable]
 public static class Global
 {
+    public static Dictionary<string, int> charDict; // Dictionary of characters and their number of strokes
+    public static Dictionary<string, Dictionary<string, float>> KCDict; // Dictionary of knowledge components (characters) and their probabilities
+    public static QLearning qLearning;
     public static GameData GD;
 
     public static string[] MagicList = new[] { "huo", "shui", "feng", "gong", "wei" };
@@ -25,7 +28,21 @@ public static class Global
 
     static Global()
     {
-        GD = new GameData();
+
+        Global.charDict = new Dictionary<string, int>{  {"wei", 3}, 
+                                                        {"gong", 3},
+                                                        {"huo", 4},
+                                                        {"shui", 4},
+                                                        {"feng", 4}};
+
+        Global.KCDict = new Dictionary<string, Dictionary<string, float>>();
+        foreach (string character in Global.charDict.Keys){
+            Global.KCDict[character] = new Dictionary<string, float>{{"prior", 0.2f}, {"learn", 0.2f}};
+            // Note: we currently consider each character to be a knowledge component in itself. 
+            // If we decide we want to differentiate the recognition and the writing of a character, this will have to change.
+        }
+
+        Global.GD = new GameData(KCDict);
     }
     
     public static void Save()

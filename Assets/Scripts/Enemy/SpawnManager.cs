@@ -11,7 +11,6 @@ public class SpawnManager : MonoBehaviour
     protected Dictionary<string, GameObject> weaknesses;
     
     public string weakness = "huo";
-
     protected void Start()
     {
     }

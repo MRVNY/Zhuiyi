@@ -13,7 +13,7 @@ public class EnemyManager : SpawnManager
     public GameObject AirEnemy;
     public GameObject HazardArea;
     
-    public string weakness = "huo";
+    //public string weakness = "huo";
     
     private Timer timer;
     

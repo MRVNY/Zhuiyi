@@ -91,7 +91,9 @@ public class UI : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
-                Grimoire.SetActive(!Grimoire.activeSelf);
+            {
+                ToggleHelp(false);
+            }
 
             // Wacom view panning
             if (Input.GetMouseButtonDown(0))
@@ -130,6 +132,31 @@ public class UI : MonoBehaviour
         // starterAssetsInputs.look = Vector2.up;
     }
 
+    private static void ToggleHelp(bool onlyLowMastery)
+    {   
+        foreach (Transform tr in Grimoire.GetComponentsInChildren<Transform>(true))
+        {
+            GameObject characterGif = tr.gameObject; 
+            
+            if (characterGif.name == "Grimoire")
+            {
+                continue;
+            }
+
+            if (onlyLowMastery){
+                if (Global.GD.kt.GetMasteryOf(characterGif.name) < 0.3)
+                {   
+                    characterGif.SetActive(true);
+                } else {
+                    characterGif.SetActive(false);
+                }
+            } else {
+                characterGif.SetActive(true);
+            }
+            
+        }
+    }
+
     public static void toggleUI(string panel)
     {
         currentUI = panel;
@@ -141,7 +168,8 @@ public class UI : MonoBehaviour
         {
             case "Writing":
                 Cursor.lockState = CursorLockMode.None;
-                Grimoire.SetActive(false);
+                Grimoire.SetActive(true);
+                ToggleHelp(true);
                 WritingPanel.SetActive(true);
                 Pause();
                 break;

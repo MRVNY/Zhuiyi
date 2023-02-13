@@ -27,10 +27,10 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private Gesture[] trainingSet = null;   // training set loaded from XML files
 
-    // private string[] three_stokes = new[] { "defense", "bow" };
-    // private string[] four_stokes = new[] { "fire", "water", "wind" };
-    private string[] three_stokes = new[] { "wei", "gong" };
-    private string[] four_stokes = new[] { "huo", "shui", "feng" };
+    // private string[] three_strokes = new[] { "defense", "bow" };
+    // private string[] four_strokes = new[] { "fire", "water", "wind" };
+    private string[] three_strokes = new[] { "wei", "gong" };
+    private string[] four_strokes = new[] { "huo", "shui", "feng" };
     private void Start()
     {
         trainingSet = LoadTrainingSet();
@@ -109,7 +109,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private void Recognize()
     {
-        // TODO: Remove if once we are properly managing the canvas reset
+        // TODO: Remove once we are properly managing the canvas reset
         if (strokeIndex >= 3){
             Gesture candidate = new Gesture(allPoints.ToArray());
             (string,float) output = PointCloudRecognizer.Classify(candidate, trainingSet);
@@ -117,8 +117,8 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
             string gestureClass = output.Item1;
             float score = output.Item2;
             
-            if ((three_stokes.Contains(gestureClass) && strokeIndex == 3) || 
-                (four_stokes.Contains(gestureClass) && strokeIndex == 4))
+            if ((three_strokes.Contains(gestureClass) && strokeIndex == 3) || 
+                (four_strokes.Contains(gestureClass) && strokeIndex == 4))
             {
                 GiveFeedback(true);
                 Debug.Log(gestureClass + ": " + score);
