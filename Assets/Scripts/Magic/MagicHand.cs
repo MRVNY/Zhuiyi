@@ -10,10 +10,10 @@ public class MagicHand : MonoBehaviour
     private GameObject Ball;
     private Camera cam;
 
-    private GameObject Huo;
-    private GameObject Shui;
-    private GameObject Feng;
-    private GameObject Gong;
+    public GameObject Huo;
+    public GameObject Shui;
+    public GameObject Feng;
+    public GameObject Gong;
     public GameObject Wei;
 
     private void Awake()
@@ -23,10 +23,10 @@ public class MagicHand : MonoBehaviour
     
     void Start()
     {
-        Huo = GetComponentInChildren<Huo>().gameObject;
-        Shui = GetComponentInChildren<Shui>().gameObject;
-        Feng = GetComponentInChildren<Feng>().gameObject;
-        Gong = GetComponentInChildren<Gong>().gameObject;
+        // Huo = GetComponentInChildren<Huo>().gameObject;
+        // Shui = GetComponentInChildren<Shui>().gameObject;
+        // Feng = GetComponentInChildren<Feng>().gameObject;
+        // Gong = GetComponentInChildren<Gong>().gameObject;
         
         cam = Camera.main;
         Wei.SetActive(false);

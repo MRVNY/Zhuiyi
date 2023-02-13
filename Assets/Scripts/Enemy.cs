@@ -61,6 +61,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player" && tag != "Hazard")
         {
             UI.damage = true;
+            Destroy(gameObject);
         }
     }
     
@@ -76,12 +77,4 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.tag == "Huo")
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
 }
