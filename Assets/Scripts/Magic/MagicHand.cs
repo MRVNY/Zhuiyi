@@ -6,7 +6,7 @@ using UnityEngine;
 public class MagicHand : MonoBehaviour
 {
     public static MagicHand Instance;
-    private GameObject ActiveMagic;
+    public GameObject ActiveMagic;
     private GameObject Ball;
     private Camera cam;
 

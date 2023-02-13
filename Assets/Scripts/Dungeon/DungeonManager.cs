@@ -6,7 +6,7 @@ using UnityEngine;
 public class DungeonManager : SpawnManager
 {
     public static DungeonManager Instance;
-
+    
     public List<TrainingEnv> Trainings;
     private int index = -1;
     
@@ -30,7 +30,7 @@ public class DungeonManager : SpawnManager
         if(Trainings.Count > index)
         {
             List<string> Sequence = GetSpawnSequence(Trainings[index].SequenceLegnth);
-            Trainings[index].SetUpTraining(Sequence);
+            Trainings[index].SetUpTraining(Sequence, index);
         }
     }
 

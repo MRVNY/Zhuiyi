@@ -20,6 +20,6 @@ public abstract class TrainingEnv : MonoBehaviour
         
     }
 
-    public abstract void SetUpTraining(List<string> Sequence);
+    public abstract void SetUpTraining(List<string> Sequence, int index);
 
 }

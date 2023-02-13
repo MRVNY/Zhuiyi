@@ -16,7 +16,7 @@ public class UI : MonoBehaviour
     public static GameObject MenuPanel;
     public static GameObject GamePanel;
     public static GameObject Grimoire;
-    private static string currentUI;
+    public static string currentUI;
 
     public GameObject Player;
     public static FirstPersonController controller;
@@ -30,9 +30,9 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        WritingPanel = transform.GetChild(0).gameObject;
-        DialogPanel = transform.GetChild(1).gameObject;
-        GamePanel = transform.GetChild(2).gameObject;
+        WritingPanel = transform.GetChild(1).gameObject;
+        DialogPanel = transform.GetChild(2).gameObject;
+        GamePanel = transform.GetChild(3).gameObject;
         //MenuPanel = transform.GetChild(2);
         Grimoire = WritingPanel.GetComponentInChildren<VerticalLayoutGroup>().gameObject;
 

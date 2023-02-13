@@ -9,7 +9,7 @@ public class Obstacle : MonoBehaviour
 {
     private Collider damage;
     public Collider block;
-    private bool passed = false;
+    public bool passed = false;
     
     public string obstacleName = "huo";
     public GameObject obstacle;

@@ -25,6 +25,8 @@ public static class Global
     //Only for infinite mode
     public static int spawnRadius = 15;
     public static int SpawnInterval = 10;
+    
+    public static string mode = "dungeon";
 
     static Global()
     {

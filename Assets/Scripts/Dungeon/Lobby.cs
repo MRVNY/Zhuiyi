@@ -52,7 +52,7 @@ public class Lobby : TrainingEnv
         }
     }
 
-    public override void SetUpTraining(List<string> Sequence)
+    public override void SetUpTraining(List<string> Sequence, int index)
     {
         for(int i = 0; i < rooms.Count; i++)
         {
