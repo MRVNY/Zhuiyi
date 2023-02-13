@@ -20,7 +20,7 @@ public class Wei : Magic
         anim = GetComponent<Animator>();
         
         PlayAnim("Expand");
-        await Task.Delay(TimeSpan.FromSeconds(20));
+        await Task.Delay(TimeSpan.FromSeconds(10));
         playing = PlayAnim("Shrink");
         
         await playing;

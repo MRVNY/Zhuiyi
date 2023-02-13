@@ -67,6 +67,6 @@ Material:
     - Color_27150168: {r: 1, g: 1, b: 1, a: 0}
     - Color_A94F19A0: {r: 1, g: 1, b: 1, a: 0}
     - Color_C19B377F: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 0}
-    - Color_F306B785: {r: 0.44705883, g: 0.54509807, b: 0.75686276, a: 0}
+    - Color_F306B785: {r: 0.5990566, g: 1, b: 0.63075244, a: 0}
     - _WindMovement: {r: 6, g: 6, b: 6, a: 0}
   m_BuildTextureStacks: []
