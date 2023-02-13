@@ -49,4 +49,8 @@ public class BayesianKnowledgeTracer {
 		return this.kt;
 	}
 
+	public float GetMasteryOf(string kc){
+		return this.kt[kc];
+	}
+
 }
