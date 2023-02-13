@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour
 {
     private Collider damage;
     public Collider block;
+    private bool passed = false;
     
     public string obstacleName = "huo";
     public GameObject obstacle;
@@ -22,26 +23,35 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag.ToLower() == obstacleName)
+        if (collision.gameObject.tag.ToLower() == obstacleName && !passed)
         {
             block.isTrigger = true;
             obstacle.SetActive(false);
-            damage.enabled = false;
+            passed = true;
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !passed)
         {
             if (other.GetComponentInChildren<Wei>() != null)
             {
                 block.isTrigger = true;
                 obstacle.SetActive(false);
-                damage.enabled = false;
+                passed = true;
+                MagicHand.Instance.Activate("");
             }
             else 
                 UI.damage = true;
+        }
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && passed)
+        {
+            MagicHand.Instance.Activate("");
         }
     }
 

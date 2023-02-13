@@ -176,7 +176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weakness: huo
   Trainings: []
-  CurrentTraining: {fileID: 0}
 --- !u!1001 &202772612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -563,7 +562,7 @@ PrefabInstance:
     - target: {fileID: 4431478311312407036, guid: 9c139752484ba4f2a81338213ab6cb99,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 19.32
       objectReference: {fileID: 0}
     - target: {fileID: 4431478311312407036, guid: 9c139752484ba4f2a81338213ab6cb99,
         type: 3}

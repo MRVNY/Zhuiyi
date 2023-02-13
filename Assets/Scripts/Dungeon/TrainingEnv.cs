@@ -5,6 +5,9 @@ using UnityEngine;
 public abstract class TrainingEnv : MonoBehaviour
 {
     public int SequenceLegnth = 5;
+    public Dictionary<string,GameObject> weaknessDict;
+
+    public bool training = false;
     // Start is called before the first frame update
     void Start()
     {

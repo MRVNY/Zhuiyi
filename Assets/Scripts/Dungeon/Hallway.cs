@@ -16,13 +16,11 @@ public class Hallway : TrainingEnv
     public GameObject FengObstacle;
     public GameObject WeiObstacle;
     
-    public Dictionary<string,GameObject> ObstacleDict;
-
     // Start is called before the first frame update
     void Awake()
     {
         obstacles = GetComponentsInChildren<Obstacle>().ToList();
-        ObstacleDict = new Dictionary<string, GameObject>()
+        weaknessDict = new Dictionary<string, GameObject>()
         {
             {"huo", HuoObstacle},
             {"shui", ShuiObstacle},
@@ -30,6 +28,12 @@ public class Hallway : TrainingEnv
             {"feng", FengObstacle},
             {"wei", WeiObstacle}
         };
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+            DungeonManager.Instance.NextTraining();
     }
 
     // Update is called once per frame
@@ -40,10 +44,11 @@ public class Hallway : TrainingEnv
 
     public override void SetUpTraining(List<string> Sequence)
     {
+        OpenDoor();
         for(int i = 0; i < Sequence.Count; i++)
         {
             obstacles[i].obstacleName = Sequence[i];
-            GameObject toInstantiate = ObstacleDict[Sequence[i]];
+            GameObject toInstantiate = weaknessDict[Sequence[i]];
             obstacles[i].obstacle = Instantiate(toInstantiate,obstacles[i].transform.position,obstacles[i].transform.rotation,obstacles[i].transform);
             obstacles[i].obstacle.SetActive(true);
         }

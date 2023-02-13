@@ -29,8 +29,8 @@ public class Enemy : MonoBehaviour
     {
         if (tag != "Hazard")
         {
-            if (!blocked && Vector3.Distance(transform.position, FirstPersonController.Instance.transform.position) <
-                20)
+            float distToPlayer = Vector3.Distance(transform.position, FirstPersonController.Instance.transform.position);
+            if (!blocked && distToPlayer < 20)
             {
                 if (tag != "Bubble") animator.runtimeAnimatorController = Walk;
                 transform.position = Vector3.MoveTowards(transform.position,
@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 if (tag != "Bubble") animator.runtimeAnimatorController = Idle;
+                if (distToPlayer > 1000) Destroy(gameObject);
             }
 
             if (blocked)

@@ -53,8 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arc: {fileID: 3304712130752734724}
-  door: {fileID: 6561694422766725309}
+  door: {fileID: 6829883910094216156}
   spawnPoint: {fileID: 2706371125694712749}
+  enemyList: []
 --- !u!1 &1400143265368412607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,9 +2848,9 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 6482961003795853924}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6561694422766725309 stripped
+--- !u!1 &6829883910094216156 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 213860374445431513, guid: e8d43df603c9b48988007fb2d4627d2d,
+  m_CorrespondingSourceObject: {fileID: 518060834654808504, guid: e8d43df603c9b48988007fb2d4627d2d,
     type: 3}
   m_PrefabInstance: {fileID: 6482961003795853924}
   m_PrefabAsset: {fileID: 0}

@@ -23,8 +23,12 @@ public class SpawnManager : MonoBehaviour
 
     public List<string> GetSpawnSequence(int SequenceLegnth)
     {
-        List<string> randomSquence = Global.MagicList.ToList(); 
-        randomSquence.Sort((a, b) => Random.Range(-1, 1));
+        List<string> randomSquence = new List<string>();
+        for (int i = 0; i < SequenceLegnth; i++)
+        {
+            randomSquence.Add(GetWeakness());
+        }
+        
         return randomSquence;
     }
 }

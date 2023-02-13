@@ -8,30 +8,30 @@ public class DungeonManager : SpawnManager
     public static DungeonManager Instance;
 
     public List<TrainingEnv> Trainings;
-    public TrainingEnv CurrentTraining;
+    private int index = -1;
     
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
+        index = -1;
         Instance = this;
         
         Trainings = GetComponentsInChildren<TrainingEnv>().ToList();
-        
-        CurrentTraining = Trainings[0];
-        List<string> Sequence = GetSpawnSequence(CurrentTraining.SequenceLegnth);
-        CurrentTraining.SetUpTraining(Sequence);
+        NextTraining();
     }
     
     public void NextTraining()
     {
-        // if (CurrentTraining.TryGetComponent<Hallway>(out Hallway hallway))
-        // {
-        //     hallway.OpenDoor();
-        // }
-        //
-        // TrainingSequence.RemoveAt(0);
-        // CurrentTraining = TrainingSequence[0];
+        if(index >= 0)
+            Trainings[index].training = false;
+        
+        index++;
+        if(Trainings.Count > index)
+        {
+            List<string> Sequence = GetSpawnSequence(Trainings[index].SequenceLegnth);
+            Trainings[index].SetUpTraining(Sequence);
+        }
     }
 
     // Update is called once per frame
