@@ -13,6 +13,8 @@ public static class Global
     public static QLearning qLearning;
     public static GameData GD;
 
+    public static string[] MagicList = new[] { "huo", "shui", "feng", "gong", "wei" };
+
     static Global()
     {
 
