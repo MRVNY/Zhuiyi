@@ -37,10 +37,11 @@ public class Gong : Magic
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 1));
             Vector3 targetPosition;
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit) && LayerMask.LayerToName(hit.transform.gameObject.layer)=="Enemy")
                 targetPosition = hit.point;
             else
                 targetPosition = ray.GetPoint(10);
+            
             transform.parent.LookAt(targetPosition);
 
             if (Time.timeScale == 1 && Input.GetKeyDown(KeyCode.Space))

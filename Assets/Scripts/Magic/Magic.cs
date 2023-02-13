@@ -6,7 +6,6 @@ public abstract class Magic : MonoBehaviour
 {
     protected List<string> dontDestroy = new List<string>(){"Magic", "Player", "Hazard"};
     protected List<string> canDestroy = new List<string>();
-    protected bool isOriginal = false;
 
     protected void LateUpdate()
     {
@@ -23,7 +22,7 @@ public abstract class Magic : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            if (canDestroy.Contains(other.tag))
+            if (canDestroy.Contains(other.tag) && transform.parent == null)
             {
                 Destroy(other.gameObject);
             }
