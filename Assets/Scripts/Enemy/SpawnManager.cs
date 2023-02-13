@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     
     public string weakness = "huo";
     
-    //Difficulty only for infinite mode
+    // Difficulty only for infinite mode
     public int spawnRadius = 15;
     public int SpawnInterval = 10;
     

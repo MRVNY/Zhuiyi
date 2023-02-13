@@ -13,7 +13,7 @@ public class EnemyManager : SpawnManager
     public GameObject AirEnemy;
     public GameObject HazardArea;
     
-    public string weakness = "huo";
+    //public string weakness = "huo";
     
     private Timer timer;
     
@@ -40,9 +40,9 @@ public class EnemyManager : SpawnManager
         while (true)
         {
             yield return new WaitForSeconds(SpawnInterval);
-            weakness = GetWeakness();
+            string weakness_ = GetWeakness();
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRadius, spawnRadius), 0, Random.Range(-spawnRadius, spawnRadius)) + FirstPersonController.Instance.transform.position;
-            var enemy = Instantiate(weaknesses[weakness], spawnPos, Quaternion.identity, transform);
+            var enemy = Instantiate(weaknesses[weakness_], spawnPos, Quaternion.identity, transform);
         }
     }
 }
