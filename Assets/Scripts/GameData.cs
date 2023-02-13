@@ -36,4 +36,11 @@ public class GameData {
 	public string gameLanguage = "en";
 	public string convoNode = "2.Message";
     // public List<string> playedConvoNodes = new List<string>();
+
+    public BayesianKnowledgeTracer kt;
+
+    public GameData(Dictionary<string, Dictionary<string, float>> KCDict)
+    {
+    	this.kt = new BayesianKnowledgeTracer(KCDict);
+    }
 }
