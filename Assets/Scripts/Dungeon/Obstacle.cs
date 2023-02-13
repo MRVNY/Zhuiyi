@@ -10,51 +10,22 @@ public class Obstacle : MonoBehaviour
     private Collider damage;
     public Collider block;
     
-    public string puzzle = "huo";
-    private Dictionary<string, GameObject> puzzleDict;
+    public string obstacleName = "huo";
+    public GameObject obstacle;
 
-    public GameObject HuoPuzzle;
-    public GameObject ShuiPuzzle;
-    public GameObject GongPuzzle;
-    public GameObject FengPuzzle;
-    public GameObject WeiPuzzle;
-    
     // Start is called before the first frame update
     void Start()
     {
         damage = GetComponent<Collider>();
         block.isTrigger = false;
-        
-        puzzleDict = new Dictionary<string, GameObject>()
-        {
-            {"huo", HuoPuzzle},
-            {"shui", ShuiPuzzle},
-            {"gong", GongPuzzle},
-            {"feng", FengPuzzle},
-            {"wei", WeiPuzzle}
-        };
-
-        puzzle = DungeonManager.Instance.GetWeakness();
-        //puzzle = "wei";
-        
-        SetPuzzle();
-    }
-
-    private void SetPuzzle()
-    {
-        // if(puzzle == "wei")
-        //     block.isTrigger = true;
-        // else
-        //     block.isTrigger = false;
-        puzzleDict[puzzle].SetActive(true);
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag.ToLower() == puzzle)
+        if (collision.gameObject.tag.ToLower() == obstacleName)
         {
             block.isTrigger = true;
-            puzzleDict[puzzle].SetActive(false);
+            obstacle.SetActive(false);
             damage.enabled = false;
         }
     }
@@ -66,7 +37,7 @@ public class Obstacle : MonoBehaviour
             if (other.GetComponentInChildren<Wei>() != null)
             {
                 block.isTrigger = true;
-                puzzleDict[puzzle].SetActive(false);
+                obstacle.SetActive(false);
                 damage.enabled = false;
             }
             else 

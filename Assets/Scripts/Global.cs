@@ -11,6 +11,17 @@ public static class Global
     public static GameData GD;
 
     public static string[] MagicList = new[] { "huo", "shui", "feng", "gong", "wei" };
+    
+    //Difficulty var
+    public static int enemySpeed = 1;
+    public static float slomoSpeed = 0.1f;
+    
+    //Only for dungeon mode
+    public static int nb_agent_per_room = 5;
+    
+    //Only for infinite mode
+    public static int spawnRadius = 15;
+    public static int SpawnInterval = 10;
 
     static Global()
     {

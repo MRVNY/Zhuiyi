@@ -7,10 +7,15 @@ public class Room : MonoBehaviour
     public Collider arc;
     public GameObject door;
     public Transform spawnPoint;
+
+    public List<string> enemyList;
     
     public void OpenDoor()
     {
-        
+        foreach (var enemy in enemyList)
+        {
+            
+        }
         arc.isTrigger = true;
         door.SetActive(false);
     }
