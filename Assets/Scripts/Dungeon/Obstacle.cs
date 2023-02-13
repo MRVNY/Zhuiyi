@@ -34,7 +34,7 @@ public class Obstacle : MonoBehaviour
             {"wei", WeiPuzzle}
         };
 
-        //puzzle = puzzleDict.Keys.ToList()[Random.Range(0, puzzleDict.Keys.Count)];
+        puzzle = DungeonManager.Instance.GetWeakness();
         //puzzle = "wei";
         
         SetPuzzle();
