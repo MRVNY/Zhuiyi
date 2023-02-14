@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<Gesture Name = "wei">
+<Gesture Name = "Wei">
 	<Stroke>
 		<Point X = "158" Y = "163" T = "0" Pressure = "0" />
 		<Point X = "171" Y = "158" T = "0" Pressure = "0" />

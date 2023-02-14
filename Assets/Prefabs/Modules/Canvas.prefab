@@ -394,7 +394,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 179022044768327098}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: toMenu
+        m_MethodName: ToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &179022044310213276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1326,12 +1326,12 @@ GameObject:
   - component: {fileID: 4001508119351513948}
   - component: {fileID: 1820891187192585861}
   m_Layer: 0
-  m_Name: gong
+  m_Name: Gong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4501398579805628100
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1425,7 +1425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3956829045277857508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 1088641521758612271}
   - component: {fileID: 3752895370144279778}
   m_Layer: 0
-  m_Name: huo
+  m_Name: Huo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1487,9 +1487,9 @@ RectTransform:
   m_Father: {fileID: 8767367152204703677}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4156544939686849737
@@ -1563,12 +1563,12 @@ GameObject:
   - component: {fileID: 3625965663244672391}
   - component: {fileID: 7353233016096380142}
   m_Layer: 0
-  m_Name: shui
+  m_Name: Shui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6506656057804117158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1930,7 +1930,7 @@ GameObject:
   - component: {fileID: 3746313382002871009}
   - component: {fileID: 1935187530400246947}
   m_Layer: 0
-  m_Name: wei
+  m_Name: Wei
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1952,9 +1952,9 @@ RectTransform:
   m_Father: {fileID: 8767367152204703677}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &879114384894900972
@@ -2028,12 +2028,12 @@ GameObject:
   - component: {fileID: 3924056158454084192}
   - component: {fileID: 5024686298654312196}
   m_Layer: 0
-  m_Name: feng
+  m_Name: Feng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &547719693893271057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2211,7 +2211,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2233,7 +2233,7 @@ GameObject:
   - component: {fileID: 649572716983236632}
   - component: {fileID: 4877665108911571067}
   m_Layer: 0
-  m_Name: gong
+  m_Name: Gong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2255,9 +2255,9 @@ RectTransform:
   m_Father: {fileID: 8767367152204703677}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -420}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4262218896591819134
@@ -2331,7 +2331,7 @@ GameObject:
   - component: {fileID: 8792276823039735078}
   - component: {fileID: 265941412229386570}
   m_Layer: 0
-  m_Name: feng
+  m_Name: Feng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2353,9 +2353,9 @@ RectTransform:
   m_Father: {fileID: 8767367152204703677}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &449278790220688209
@@ -2429,12 +2429,12 @@ GameObject:
   - component: {fileID: 1872102216762103206}
   - component: {fileID: 8700295992618338937}
   m_Layer: 0
-  m_Name: wei
+  m_Name: Wei
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3003996476027244964
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2796,12 +2796,12 @@ GameObject:
   - component: {fileID: 7811205764314835086}
   - component: {fileID: 1601204645623766957}
   m_Layer: 0
-  m_Name: huo
+  m_Name: Huo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4960640281436390463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3028,7 +3028,7 @@ GameObject:
   - component: {fileID: 1577730851711255876}
   - component: {fileID: 2350830009546636717}
   m_Layer: 0
-  m_Name: shui
+  m_Name: Shui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3050,9 +3050,9 @@ RectTransform:
   m_Father: {fileID: 8767367152204703677}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -180}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &649588160662210879

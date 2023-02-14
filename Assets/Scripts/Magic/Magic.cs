@@ -25,7 +25,7 @@ public abstract class Magic : MonoBehaviour
 
             if (canDestroy.Contains(other.tag) && transform.parent == null)
             {
-                Global.GD.kt.UpdateKnowledge(gameObject.tag.ToLower(), true);
+                Global.GD.kt.UpdateKnowledge(gameObject.tag, true);
                 Destroy(other.gameObject);
             }
         }

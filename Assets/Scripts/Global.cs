@@ -13,16 +13,16 @@ public static class Global
     public static QLearning qLearning;
     public static GameData GD;
 
-    public static string[] MagicList = new[] { "huo", "shui", "feng", "gong", "wei" };
+    public static string[] MagicList = new[] { "Huo", "Shui", "Feng", "Gong", "Wei" };
 
     static Global()
     {
 
-        charDict = new Dictionary<string, int>{  {"wei", 3}, 
-                                                        {"gong", 3},
-                                                        {"huo", 4},
-                                                        {"shui", 4},
-                                                        {"feng", 4}};
+        charDict = new Dictionary<string, int>{  {"Wei", 3}, 
+                                                        {"Gong", 3},
+                                                        {"Huo", 4},
+                                                        {"Shui", 4},
+                                                        {"Feng", 4}};
 
         KCDict = new Hashtable();
         foreach (string character in charDict.Keys)

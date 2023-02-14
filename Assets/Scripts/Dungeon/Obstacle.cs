@@ -11,7 +11,7 @@ public class Obstacle : MonoBehaviour
     public Collider block;
     public bool passed = false;
     
-    public string obstacleName = "huo";
+    public string obstacleName = "Huo";
     public GameObject obstacle;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag.ToLower() == obstacleName && !passed)
+        if (collision.gameObject.tag == obstacleName && !passed)
         {
             block.isTrigger = true;
             obstacle.SetActive(false);
@@ -52,7 +52,7 @@ public class Obstacle : MonoBehaviour
         if (other.gameObject.tag == "Player" && passed)
         {
             MagicHand.Instance.Activate("");
-            Wei.Instance.gameObject.SetActive(false);
+            Wei.Instance?.gameObject.SetActive(false);
             if (Global.GD.mode == "Training" &&
                 ((Hallway)DungeonManager.Instance.Trainings.Last()).obstacles.Last() == this)
             {

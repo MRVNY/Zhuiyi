@@ -162,6 +162,7 @@ public class UI : MonoBehaviour
             
             if (onlyLowMastery){
                 if (Global.GD.kt.GetMasteryOf(KC) < 0.5)
+
                 {   
                     characterGif.SetActive(true);
                 } else {
@@ -211,6 +212,7 @@ public class UI : MonoBehaviour
     
     public static void ToMenu()
     {
+        Global.Save();
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Menu");
     }

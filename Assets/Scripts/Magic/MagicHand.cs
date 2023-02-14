@@ -31,7 +31,7 @@ public class MagicHand : MonoBehaviour
         cam = Camera.main;
         Wei.SetActive(false);
         Activate("");
-        //Activate("wei");
+        //Activate("Wei");
     }
 
     public void Activate(string magicName)
@@ -45,22 +45,22 @@ public class MagicHand : MonoBehaviour
         
         switch (magicName)
         {
-            case "huo":
+            case "Huo":
                 ActiveMagic = Huo;
                 break;
-            case "shui":
+            case "Shui":
                 ActiveMagic = Shui;
                 break;
-            case "feng":
+            case "Feng":
                 ActiveMagic = Feng;
                 break;
-            case "gong":
+            case "Gong":
                 ActiveMagic = Gong;
                 Gong.transform.parent.gameObject.SetActive(true);
                 break;
-            case "wei":
+            case "Wei":
                 ActiveMagic = Wei;
-                Global.GD.kt.UpdateKnowledge("wei", true);
+                Global.GD.kt.UpdateKnowledge("Wei", true);
                 break;
         }
         
