@@ -31,6 +31,8 @@ public class UI : MonoBehaviour
     public static Task damaging;
     public static bool dead = false;
     public TextMeshProUGUI Life;
+    
+    public static Joycon JC;
 
     private void Start()
     {
@@ -49,6 +51,9 @@ public class UI : MonoBehaviour
         controller = Player.GetComponent<FirstPersonController>();
         playerInput = Player.GetComponent<PlayerInput>();
         
+        if(JoyconManager.Instance!=null && JoyconManager.Instance.j.Count > 0)
+            JC = JoyconManager.Instance.j[0];
+
         dead = false;
         toggleUI("Dialog");
     }
@@ -85,28 +90,45 @@ public class UI : MonoBehaviour
         if (damage && damaging == null)
         {
             damaging = Damage();
-            Life.text = Life.text.Substring(0, Life.text.Length - 1);
-            if (Life.text.Length == 0)
+            if (Global.GD.mode != "Intro")
             {
-                dead = true;
-                Global.GD.convoNode = "death";
-                toggleUI("Dialog");
+                Life.text = Life.text.Substring(0, Life.text.Length - 1);
+                if (Life.text.Length == 0)
+                {
+                    dead = true;
+                    Global.GD.convoNode = "death";
+                    toggleUI("Dialog");
+                }
             }
         }
-            
 
-        if (Input.anyKeyDown)
+    
+        
+        if (JC != null)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            float[] stick = JC.GetStick();
+            starterAssetsInputs.move = new Vector2(stick[0], stick[1]);
+            
+            if (JC.GetButtonDown(Joycon.Button.SHOULDER_2))
             {
                 if (currentUI == "Game") toggleUI("Writing");
                 else if (currentUI == "Writing") toggleUI("Game");
             }
 
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
+            if (JC.GetButtonDown(Joycon.Button.DPAD_UP))
                 ToggleHelp(false);
+        }
+
+        if (Input.anyKeyDown)
+        {
+            if (Input.GetKeyDown(KeyCode.E) || (JC!=null && JC.GetButtonDown(Joycon.Button.SHOULDER_2)))
+            {
+                if (currentUI == "Game") toggleUI("Writing");
+                else if (currentUI == "Writing") toggleUI("Game");
             }
+
+            if (Input.GetKeyDown(KeyCode.Q) || (JC!=null && JC.GetButtonDown(Joycon.Button.DPAD_UP)))
+                ToggleHelp(false);
 
             // Wacom view panning
             if (Input.GetMouseButtonDown(0))
@@ -117,32 +139,13 @@ public class UI : MonoBehaviour
         else if (Input.GetMouseButton(0))
         {
             Vector2 diff = (Vector2)Input.mousePosition - lastPenPos;
-            starterAssetsInputs.look = new Vector2(diff.x, - diff.y) * 0.2f;
-                //Quaternion.Euler(Camera.main.transform.rotation.eulerAngles + new Vector3(-diff.y, diff.x, 0));
+            starterAssetsInputs.look = new Vector2(diff.x, -diff.y) * 0.2f;
+            //Quaternion.Euler(Camera.main.transform.rotation.eulerAngles + new Vector3(-diff.y, diff.x, 0));
             lastPenPos = Input.mousePosition;
         }
 
         else if (Input.GetMouseButtonUp(0))
-        {
             starterAssetsInputs.look = Vector2.zero;
-        }
-
-        // if (currentUI != "Game" && !Input.anyKey)
-        // {
-        //     toggleUI("Game");
-        // }
-        
-        //Auto aim?
-        // RaycastHit hit;
-        // Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 1));
-        //
-        // if (Physics.Raycast(ray, out hit))
-        // { 
-        //     GamePanel.transform.GetChild(0).position = Camera.main.WorldToScreenPoint(hit.point);
-        // }
-
-        // Camera.main.transform.rotation = Quaternion.Euler(Vector3.up);
-        // starterAssetsInputs.look = Vector2.up;
     }
 
     private static void ToggleHelp(bool onlyLowMastery)

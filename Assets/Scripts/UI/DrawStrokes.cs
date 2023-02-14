@@ -134,6 +134,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
             {
                 line.color = Color.green;
             }
+            if(UI.JC != null) UI.JC.SetRumble (160, 320, 0.6f, 20);
         }
     }
 

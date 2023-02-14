@@ -33,7 +33,16 @@ public class JoyconManager: MonoBehaviour
 
 		j = new List<Joycon>();
 		bool isLeft = false;
-		HIDapi.hid_init();
+
+		try
+		{
+			HIDapi.hid_init();
+		}
+		catch (DllNotFoundException e)
+		{
+			gameObject.SetActive(false);
+			return;
+		}
 
 		IntPtr ptr = HIDapi.hid_enumerate(vendor_id, 0x0);
 		IntPtr top_ptr = ptr;

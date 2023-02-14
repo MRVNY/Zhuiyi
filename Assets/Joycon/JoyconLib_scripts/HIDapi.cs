@@ -6,7 +6,7 @@ using System.Text;
 
 
 public class HIDapi {
-
+    
     [DllImport("hidapi")]
     public static extern int hid_init();
 
