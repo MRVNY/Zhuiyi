@@ -151,13 +151,14 @@ public class UI : MonoBehaviour
         {
             GameObject characterGif = anim.gameObject; 
             
-            if (characterGif.name == "Grimoire")
+            string KC = characterGif.name;
+            if (KC == "Grimoire" || !Global.GD.actionSpace.Contains(KC))
             {
                 continue;
             }
-
+            
             if (onlyLowMastery){
-                if (Global.GD.kt.GetMasteryOf(characterGif.name) < 0.3)
+                if (Global.GD.kt.GetMasteryOf(KC) < 0.5)
                 {   
                     characterGif.SetActive(true);
                 } else {
