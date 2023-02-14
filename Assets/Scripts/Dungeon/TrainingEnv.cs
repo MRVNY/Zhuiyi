@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class TrainingEnv : MonoBehaviour
 {
-    public int SequenceLegnth = 5;
+    public int SequenceLength = 5;
     public Dictionary<string,GameObject> weaknessDict;
 
     public bool training = false;

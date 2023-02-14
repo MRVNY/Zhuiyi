@@ -203,14 +203,13 @@ public class UI : MonoBehaviour
                 GamePanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
                 Resume();
-                if (dead) toMenu();
+                if (dead) ToMenu();
                 break;
         }
     }
     
-    public static void toMenu()
+    public static void ToMenu()
     {
-        Global.Save();
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Menu");
     }
