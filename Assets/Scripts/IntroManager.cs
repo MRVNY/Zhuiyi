@@ -9,7 +9,7 @@ using UnityEngine;
 public class IntroManager : MonoBehaviour
 {
     private string tutoStage = "init";
-    public string toLean = "huo";
+    public string toLean = "Huo";
     private Hallway hallway;
     
     public GameObject Tuto;
@@ -21,7 +21,7 @@ public class IntroManager : MonoBehaviour
     {
         tutoStage = "init";
         
-        toLean = Global.GD.actionSpace[0].ToLower();
+        toLean = Global.GD.actionSpace[0];
         TutoText = Tuto.GetComponentInChildren<TextMeshProUGUI>();
         hallway = GetComponentInChildren<Hallway>();
         hallway.SetUpTraining(new List<string>(){toLean}, 0);
@@ -47,7 +47,7 @@ public class IntroManager : MonoBehaviour
         
         if (tutoStage == "writing" && MagicHand.Instance.ActiveMagic != null)
         {
-            if (MagicHand.Instance.ActiveMagic.tag.ToLower() == toLean)
+            if (MagicHand.Instance.ActiveMagic.tag == toLean)
             {
                 TutoText.text = "Press E again to return to game";
                 tutoStage = "loaded";

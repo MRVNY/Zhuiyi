@@ -10,7 +10,7 @@ public class GameData {
 	// public string path = Application.streamingAssetsPath + Path.PathSeparator + "Levels" +Path.PathSeparator;
 	public List<string> levelList;
 	public List<string> availableLevels = new List<string>();
-	public List<string> actionSpace;
+	public List<string> actionSpace = new List<string>() {"Huo", "Shui", "Feng", "Gong", "Wei"};
 
 	//Difficulty var
 	public  int enemySpeed = 1;
@@ -48,5 +48,6 @@ public class GameData {
 	        "Infinite: Maze"
         };
         availableLevels.Add(levelList[0]);
+        availableLevels = levelList;
     }
 }

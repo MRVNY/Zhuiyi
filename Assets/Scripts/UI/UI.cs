@@ -152,15 +152,10 @@ public class UI : MonoBehaviour
     {   
         foreach (Animator anim in Grimoire.GetComponentsInChildren<Animator>(true))
         {
-            GameObject characterGif = anim.gameObject; 
-            
-            if (characterGif.name == "Grimoire")
-            {
-                continue;
-            }
+            GameObject characterGif = anim.gameObject;
 
             if (onlyLowMastery){
-                if (Global.GD.kt.GetMasteryOf(characterGif.name) < 0.3)
+                if (Global.GD.kt.GetMasteryOf(characterGif.name) < 0.4 && Global.GD.actionSpace.Contains(characterGif.name))
                 {   
                     characterGif.SetActive(true);
                 } else {
@@ -210,6 +205,7 @@ public class UI : MonoBehaviour
     
     public static void ToMenu()
     {
+        Global.Save();
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Menu");
     }

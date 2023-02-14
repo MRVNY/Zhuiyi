@@ -23,11 +23,11 @@ public class Hallway : TrainingEnv
         SequenceLength = obstacles.Count;
         weaknessDict = new Dictionary<string, GameObject>()
         {
-            {"huo", HuoObstacle},
-            {"shui", ShuiObstacle},
-            {"gong", GongObstacle},
-            {"feng", FengObstacle},
-            {"wei", WeiObstacle}
+            {"Huo", HuoObstacle},
+            {"Shui", ShuiObstacle},
+            {"Gong", GongObstacle},
+            {"Feng", FengObstacle},
+            {"Wei", WeiObstacle}
         };
     }
     

@@ -29,8 +29,8 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     // private string[] three_strokes = new[] { "defense", "bow" };
     // private string[] four_strokes = new[] { "fire", "water", "wind" };
-    private string[] three_strokes = new[] { "wei", "gong" };
-    private string[] four_strokes = new[] { "huo", "shui", "feng" };
+    private string[] three_strokes = new[] { "Wei", "Gong" };
+    private string[] four_strokes = new[] { "Huo", "Shui", "Feng" };
     private void Start()
     {
         trainingSet = LoadTrainingSet();

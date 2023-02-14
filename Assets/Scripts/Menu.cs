@@ -19,7 +19,9 @@ public class Menu : MonoBehaviour
             if (button.name == "Levels")
                 button.onClick.AddListener((() => { ShowLevels(); }));
             else if (button.name == "Reset")
-                button.onClick.AddListener((() => { Global.DeleteAllSaveFiles(); }));
+                button.onClick.AddListener((() => { Global.DeleteAllSaveFiles();
+                    SceneManager.LoadScene("Menu");
+                }));
             else if (button.name == "Quit")
                 button.onClick.AddListener((() => { Application.Quit(); }));
         }

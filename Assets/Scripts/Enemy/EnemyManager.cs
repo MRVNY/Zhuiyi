@@ -23,11 +23,11 @@ public class EnemyManager : SpawnManager
         Instance = this;
         weaknesses = new Dictionary<string, GameObject>()
         {
-            { "huo", WoodEnemy },
-            { "shui", FireEnemy },
-            { "gong", BubbleEnemy },
-            { "feng", AirEnemy },
-            { "wei", HazardArea }
+            { "Huo", WoodEnemy },
+            { "Shui", FireEnemy },
+            { "Gong", BubbleEnemy },
+            { "Feng", AirEnemy },
+            { "Wei", HazardArea }
         };
         
         StartCoroutine(Spawn());

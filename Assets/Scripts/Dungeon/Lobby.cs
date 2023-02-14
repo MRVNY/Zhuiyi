@@ -18,7 +18,7 @@ public class Lobby : TrainingEnv
 
     private int roomRadius = 2;
     
-    public string weakness = "huo";
+    public string weakness = "Huo";
     void Start()
     {
         rooms = GetComponentsInChildren<Room>().ToList(); 
@@ -26,11 +26,11 @@ public class Lobby : TrainingEnv
         
         weaknessDict = new Dictionary<string, GameObject>()
         {
-            { "huo", WoodEnemy },
-            { "shui", FireEnemy },
-            { "gong", BubbleEnemy },
-            { "feng", AirEnemy },
-            { "wei", BubbleEnemy }
+            { "Huo", WoodEnemy },
+            { "Shui", FireEnemy },
+            { "Gong", BubbleEnemy },
+            { "Feng", AirEnemy },
+            { "Wei", BubbleEnemy }
         };
     }
 
