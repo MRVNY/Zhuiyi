@@ -12,7 +12,8 @@ public abstract class Magic : MonoBehaviour
         //destroy if too far
         if (transform.parent == null && Vector3.Distance(MagicHand.Instance.transform.position,transform.position)>100)
             Destroy(gameObject);
-    }    
+    }
+    
     protected void OnTriggerEnter(Collider other)
     {
         if (transform.parent == null)
@@ -24,6 +25,7 @@ public abstract class Magic : MonoBehaviour
 
             if (canDestroy.Contains(other.tag) && transform.parent == null)
             {
+                Global.GD.kt.UpdateKnowledge(gameObject.tag.ToLower(), true);
                 Destroy(other.gameObject);
             }
         }
