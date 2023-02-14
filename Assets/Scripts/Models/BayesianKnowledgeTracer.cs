@@ -21,7 +21,7 @@ public class BayesianKnowledgeTracer {
 		}
 	}
 
-	// :param kc_attempted: name of the KC 
+/*	// :param kc_attempted: name of the KC 
 	// :param success: boolean to indicate whether the question was answered correctly
 	// :return: Change in probability of mastery after attempt
 	public float UpdateKnowledge(string kc_attempted, bool success){
@@ -42,6 +42,14 @@ public class BayesianKnowledgeTracer {
 		this.kt[kc_attempted] = Min(1, p_obs + (1 - p_obs) * this.KCDict[kc_attempted]["learn"]);
 
 		return this.kt[kc_attempted] - p_mastered; // difference between mastery before and after resource was used
+	}*/
+
+	public void UpdateKnowledge(string KC, bool success){
+		if (success){
+			this.kt[KC] = Min(1, this.kt[KC] + this.KCDict[KC]["learn"]);
+		} else {
+			this.kt[KC] = Max(0, this.kt[KC] - this.KCDict[KC]["learn"]);
+		}
 	}
 
 	// Careful: this exposes the KT object itself

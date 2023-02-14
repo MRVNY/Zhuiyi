@@ -12,9 +12,7 @@ public class EnemyManager : SpawnManager
     public GameObject BubbleEnemy;
     public GameObject AirEnemy;
     public GameObject HazardArea;
-    
-    //public string weakness = "huo";
-    
+        
     private Timer timer;
     
     public static EnemyManager Instance;
@@ -39,8 +37,8 @@ public class EnemyManager : SpawnManager
     {
         while (true)
         {
+            string weakness = GetSpawnSequence(1)[0];
             yield return new WaitForSeconds(Global.GD.SpawnInterval);
-            weakness = GetWeakness();
             int radius = Global.GD.spawnRadius;
             Vector3 spawnPos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius)) 
                                + FirstPersonController.Instance.transform.position;
