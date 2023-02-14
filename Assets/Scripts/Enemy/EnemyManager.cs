@@ -35,7 +35,8 @@ public class EnemyManager : SpawnManager
     
     private IEnumerator Spawn()
     {
-        while (true)
+        bool gameOver = false;
+        while (!gameOver)
         {
             string weakness = GetSpawnSequence(1)[0];
             yield return new WaitForSeconds(Global.GD.SpawnInterval);
@@ -43,6 +44,17 @@ public class EnemyManager : SpawnManager
             Vector3 spawnPos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius)) 
                                + FirstPersonController.Instance.transform.position;
             var enemy = Instantiate(weaknesses[weakness], spawnPos, Quaternion.identity, transform);
+
+            gameOver = true;
+            foreach (string KC in Global.charDict.Keys)
+            {
+                if (Global.GD.kt.GetMasteryOf(KC) < 1.0f) // We continue as long as there's at least one skill that hasn't reached full mastery
+                {
+                    gameOver = false;
+                    break;
+                }
+            }
         }
+        UI.ToMenu();
     }
 }
