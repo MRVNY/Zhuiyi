@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d96066a5050499da4d2b130a0fa06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Huo: {fileID: 0}
+  Shui: {fileID: 0}
+  Feng: {fileID: 0}
+  Gong: {fileID: 0}
   Wei: {fileID: 0}
 --- !u!1 &4135013735270702863
 GameObject:
@@ -433,6 +437,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow
       objectReference: {fileID: 0}
+    - target: {fileID: 3890374255974211116, guid: 175419b4abdbd4aefb47d42596d70394,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890374255974211118, guid: 175419b4abdbd4aefb47d42596d70394,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3890374255974367756, guid: 175419b4abdbd4aefb47d42596d70394,
         type: 3}
       propertyPath: m_RootOrder
@@ -516,19 +530,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 125651928081217719}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8916153554044614505
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765859233924736667}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 20, z: 1}
-  m_Center: {x: 0, y: 0, z: -1}
 --- !u!54 &1693034185273891572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -545,6 +546,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8916153554044614505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765859233924736667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 20, z: 1}
+  m_Center: {x: 0, y: 0, z: -1}
 --- !u!114 &949147759348942047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +637,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Steam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466262187426498442, guid: 01f6eb36078d746e08c15d3d4bd8d240,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01f6eb36078d746e08c15d3d4bd8d240, type: 3}
@@ -778,6 +797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5565825154026304306, guid: 7b8e929bc437d4b44927e330f771f553,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565825154026304306, guid: 7b8e929bc437d4b44927e330f771f553,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -846,10 +870,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1008952089840542554}
     m_Modifications:
+    - target: {fileID: 4692309085276357343, guid: d176e56a59b674ac2ad0723a35aa8a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6686728367010442612, guid: d176e56a59b674ac2ad0723a35aa8a79,
         type: 3}
       propertyPath: m_Name
       value: WaterLeak
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686728367010442612, guid: d176e56a59b674ac2ad0723a35aa8a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6686728367010442612, guid: d176e56a59b674ac2ad0723a35aa8a79,
         type: 3}
@@ -1013,10 +1047,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1008952089840542554}
     m_Modifications:
+    - target: {fileID: 421511228387040285, guid: e6008f169ce03429d90be50869226bbf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 421511228387040287, guid: e6008f169ce03429d90be50869226bbf,
         type: 3}
       propertyPath: m_Name
       value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 421511228387040287, guid: e6008f169ce03429d90be50869226bbf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 421511228387393599, guid: e6008f169ce03429d90be50869226bbf,
         type: 3}

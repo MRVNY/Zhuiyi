@@ -83,6 +83,7 @@ public class Dialog : MonoBehaviour
         {
             UI.toggleUI("Game");
             toWrite.Clear();
+            //load menu
         }
 
         else if (skipped)
@@ -92,6 +93,7 @@ public class Dialog : MonoBehaviour
             if (toWrite.Count == 0)
             {
                 UI.toggleUI("Game");
+                //load menu
             }
             else setDialog();
         }

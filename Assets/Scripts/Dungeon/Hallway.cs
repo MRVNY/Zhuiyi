@@ -8,7 +8,7 @@ public class Hallway : TrainingEnv
     public Collider arc;
     public GameObject door;
     
-    private List<Obstacle> obstacles;
+    public List<Obstacle> obstacles;
     
     public GameObject HuoObstacle;
     public GameObject ShuiObstacle;
@@ -20,6 +20,7 @@ public class Hallway : TrainingEnv
     void Awake()
     {
         obstacles = GetComponentsInChildren<Obstacle>().ToList();
+        SequenceLegnth = obstacles.Count;
         weaknessDict = new Dictionary<string, GameObject>()
         {
             {"huo", HuoObstacle},
@@ -42,9 +43,9 @@ public class Hallway : TrainingEnv
         
     }
 
-    public override void SetUpTraining(List<string> Sequence)
+    public override void SetUpTraining(List<string> Sequence, int index)
     {
-        OpenDoor();
+        if(index>0) OpenDoor();
         for(int i = 0; i < Sequence.Count; i++)
         {
             obstacles[i].obstacleName = Sequence[i];
