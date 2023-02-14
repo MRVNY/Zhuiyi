@@ -154,10 +154,17 @@ public class UI : MonoBehaviour
     {   
         foreach (Animator anim in Grimoire.GetComponentsInChildren<Animator>(true))
         {
-            GameObject characterGif = anim.gameObject;
-
+            GameObject characterGif = anim.gameObject; 
+            
+            string KC = characterGif.name;
+            if (KC == "Grimoire" || !Global.GD.actionSpace.Contains(KC))
+            {
+                continue;
+            }
+            
             if (onlyLowMastery){
-                if (Global.GD.kt.GetMasteryOf(characterGif.name) < 0.4 && Global.GD.actionSpace.Contains(characterGif.name))
+                if (Global.GD.kt.GetMasteryOf(KC) < 0.5)
+
                 {   
                     characterGif.SetActive(true);
                 } else {
