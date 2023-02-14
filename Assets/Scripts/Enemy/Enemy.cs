@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     public bool blocked = false;
     public AnimatorController Idle;
     public AnimatorController Walk;
-    public AnimatorController Run;
-    public AnimatorController Attack;
+    // public AnimatorController Run;
+    // public AnimatorController Attack;
 
     void Start()
     {
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
 
     private async void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && tag != "Hazard")
+        if (collision.gameObject.tag == "Player" && tag != "Hazard" && collision.transform.parent==null)
         {
             UI.damage = true;
             Destroy(gameObject);

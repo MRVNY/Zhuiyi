@@ -69,6 +69,7 @@ public class MagicHand : MonoBehaviour
 
     public void Attack()
     {
+        if(UI.JC != null) UI.JC.SetRumble (160, 320, 0.6f, 200);
         Ball = Instantiate(ActiveMagic, ActiveMagic.transform.position, ActiveMagic.transform.rotation, null);
         
         RaycastHit hit;
@@ -92,7 +93,10 @@ public class MagicHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale==1 && Input.GetKeyDown(KeyCode.Space) && ActiveMagic != null)
+        if (Time.timeScale==1 && ActiveMagic != null 
+                              && (Input.GetKeyDown(KeyCode.Space) 
+                                  || (UI.JC!=null && (UI.JC.GetButtonDown(Joycon.Button.SHOULDER_1) 
+                                                      || UI.JC.GetAccel().magnitude>5))) )
         {
             if (ActiveMagic == Huo || ActiveMagic == Shui || ActiveMagic == Feng)
                 Attack();

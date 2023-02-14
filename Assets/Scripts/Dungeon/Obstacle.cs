@@ -52,6 +52,7 @@ public class Obstacle : MonoBehaviour
         if (other.gameObject.tag == "Player" && passed)
         {
             MagicHand.Instance.Activate("");
+            Wei.Instance.gameObject.SetActive(false);
             if (Global.GD.mode == "Training" &&
                 ((Hallway)DungeonManager.Instance.Trainings.Last()).obstacles.Last() == this)
             {

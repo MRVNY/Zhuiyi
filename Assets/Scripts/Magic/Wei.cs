@@ -9,9 +9,11 @@ public class Wei : Magic
 {
     private Animator anim;
     private Task playing;
+    public static Wei Instance;
 
     private void Start()
     {
+        Instance = this;
         dontDestroy.Add("Wei");
     }
 
@@ -29,8 +31,11 @@ public class Wei : Magic
     
     private async Task PlayAnim(string animName)
     {
-        anim.Play(animName);
-        await Task.Delay(TimeSpan.FromSeconds(anim.GetCurrentAnimatorStateInfo(0).length));
+        if (anim != null)
+        {
+            anim.Play(animName);
+            await Task.Delay(TimeSpan.FromSeconds(anim.GetCurrentAnimatorStateInfo(0).length));
+        }
     }
 
     private async void OnCollisionEnter(Collision collision)

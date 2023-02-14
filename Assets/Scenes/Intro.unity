@@ -174,6 +174,7 @@ MonoBehaviour:
   toLean: huo
   Tuto: {fileID: 1881936812}
   TutoText: {fileID: 614248585}
+  anim: {fileID: 0}
 --- !u!65 &62447804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -496,6 +497,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 599827166, guid: 9c139752484ba4f2a81338213ab6cb99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4431478311312407035, guid: 9c139752484ba4f2a81338213ab6cb99,
         type: 3}
       propertyPath: m_Name
@@ -554,11 +559,6 @@ PrefabInstance:
     - target: {fileID: 4431478311312407036, guid: 9c139752484ba4f2a81338213ab6cb99,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710603338890660028, guid: 9c139752484ba4f2a81338213ab6cb99,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -865,6 +865,7 @@ MonoBehaviour:
   training: 0
   arc: {fileID: 694944055968487025}
   door: {fileID: 694944055968487024}
+  obstacles: []
   HuoObstacle: {fileID: 2765625182908322671, guid: 8ce5a64348be74942b754d8e02a3b4fb,
     type: 3}
   ShuiObstacle: {fileID: 1159120121252590000, guid: 8838805c5d3b943d38576e0b08491ab7,
