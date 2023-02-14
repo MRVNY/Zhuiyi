@@ -52,6 +52,15 @@ public class Obstacle : MonoBehaviour
         if (other.gameObject.tag == "Player" && passed)
         {
             MagicHand.Instance.Activate("");
+            var tmo = ((Hallway)DungeonManager.Instance.Trainings.Last()).obstacles.Last().gameObject;
+            if (Global.GD.mode == "Traning" &&
+                ((Hallway)DungeonManager.Instance.Trainings.Last()).obstacles.Last().gameObject == gameObject)
+            {
+                List<string> levelList = Global.GD.levelList;
+                int index = levelList.IndexOf(Global.GD.convoNode);
+                if(levelList.Count>index+1) Global.GD.availableLevels.Add(levelList[index + 1]);
+                UI.toMenu();
+            }
         }
     }
 

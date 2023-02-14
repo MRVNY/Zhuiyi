@@ -9,6 +9,7 @@ using System.IO;
 public class GameData {
 	// public string path = Application.streamingAssetsPath + Path.PathSeparator + "Levels" +Path.PathSeparator;
 	public List<string> levelList;
+	public List<string> availableLevels = new List<string>();
 	public List<string> actionSpace;
 
 	//Difficulty var
@@ -25,12 +26,12 @@ public class GameData {
 	public  string mode = "dungeon";
 	
 	public string gameLanguage = "en";
-	public string convoNode = "2.Message";
+	public string convoNode = "";
     // public List<string> playedConvoNodes = new List<string>();
 
     public BayesianKnowledgeTracer kt;
 
-    public GameData(Dictionary<string, Dictionary<string, float>> KCDict)
+    public GameData(Hashtable KCDict)
     {
     	this.kt = new BayesianKnowledgeTracer(KCDict);
         levelList = new List<string>()
@@ -46,5 +47,6 @@ public class GameData {
 	        "Infinite: OpenSpace",
 	        "Infinite: Maze"
         };
+        availableLevels.Add(levelList[0]);
     }
 }

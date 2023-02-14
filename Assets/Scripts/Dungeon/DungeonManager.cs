@@ -8,7 +8,7 @@ public class DungeonManager : SpawnManager
     public static DungeonManager Instance;
     
     public List<TrainingEnv> Trainings;
-    private int index = -1;
+    public int index = -1;
     
     // Start is called before the first frame update
     void Start()

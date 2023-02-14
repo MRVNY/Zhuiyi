@@ -1,13 +1,18 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using static System.Math;
 
+[Serializable]
 public class BayesianKnowledgeTracer {
+	// private Dictionary<string, Dictionary<string, float>> KCDict;
+	// private Dictionary<string, float> kt;
+	private Hashtable KCDict;
+	private Hashtable kt;
 
-	private Dictionary<string, Dictionary<string, float>> KCDict;
-	private Dictionary<string, float> kt;
-	
 	// :param KCDict: dictionary with key: name of the KC, and value: dictionary containing p(L) and p(T) probabilities
-	public BayesianKnowledgeTracer(Dictionary<string, Dictionary<string, float>> KCDict){
+	public BayesianKnowledgeTracer(Hashtable KCDict){
 		this.KCDict = KCDict;
 		this.Reset();
 	}
@@ -15,9 +20,9 @@ public class BayesianKnowledgeTracer {
 	public void Reset(){
 		
 		// (Re)initialisation of the knowledge tracer with prior probabilities.
-		this.kt = new Dictionary<string, float>();
+		this.kt = new Hashtable();
 		foreach (string kc in this.KCDict.Keys){
-			this.kt[kc] = this.KCDict[kc]["prior"];
+			this.kt[kc] = ((Hashtable)KCDict[kc])["prior"];
 		}
 	}
 
@@ -46,19 +51,19 @@ public class BayesianKnowledgeTracer {
 
 	public void UpdateKnowledge(string KC, bool success){
 		if (success){
-			this.kt[KC] = Min(1, this.kt[KC] + this.KCDict[KC]["learn"]);
+			this.kt[KC] = Min(1, (float)this.kt[KC] + (float)((Hashtable)KCDict[KC])["learn"]);
 		} else {
-			this.kt[KC] = Max(0, this.kt[KC] - this.KCDict[KC]["learn"]);
+			this.kt[KC] = Max(0, (float)this.kt[KC] - (float)((Hashtable)KCDict[KC])["learn"]);
 		}
 	}
 
 	// Careful: this exposes the KT object itself
-	public Dictionary<string, float> GetCurrentState(){
-		return this.kt;
+	public List<float> GetCurrentState()
+	{
+		return kt.Values.Cast<float>().ToList();
 	}
 
 	public float GetMasteryOf(string kc){
-		return this.kt[kc];
+		return (float)this.kt[kc];
 	}
-
 }

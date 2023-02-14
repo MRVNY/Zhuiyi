@@ -36,7 +36,10 @@ public class Menu : MonoBehaviour
             {
                 GameObject NewButton = Instantiate(buttonPrefab, root);
                 NewButton.GetComponentInChildren<TextMeshProUGUI>().text = level;
-                NewButton.GetComponent<Button>().onClick.AddListener((() => { LaunchGame(level); }));
+                string delegateLevel = level;
+                if(Global.GD.availableLevels.Contains(level))
+                    NewButton.GetComponent<Button>().onClick.AddListener((() => { LaunchGame(delegateLevel); }));
+                else NewButton.GetComponent<Button>().interactable = false;
             }
             
             Destroy(root.GetChild(0).gameObject);
@@ -62,7 +65,7 @@ public class Menu : MonoBehaviour
                 break;
             case "Infinite":
                 Global.GD.actionSpace = Global.MagicList.ToList();
-                if(tmp[1] == "OpenSpace") SceneManager.LoadScene("Infinite");
+                if (tmp[1] == "OpenSpace") SceneManager.LoadScene("Infinite");
                 else SceneManager.LoadScene("Maze");
                 break;
         }

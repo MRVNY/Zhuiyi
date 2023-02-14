@@ -22,29 +22,45 @@ public class SpawnManager : MonoBehaviour
 
     public List<string> GetSpawnSequence(int sequenceLength)
     {
-        NDarray p = Softmax(0.8f); // tau value to be fixed with experimentation
-        List<string> randomSequence = new List<string>();
+        List<float> p = Softmax(0.8f); // tau value to be fixed with experimentation
+        List<string> Sequence = new List<string>();
         for (int i = 0; i < sequenceLength; i++)
         {
-            string[] result = np.random.choice(np.array(Global.charDict.Keys.ToArray()), null, true, p).GetData<string>();
-            randomSequence.Add(result[0]);
+            List<float> cumsum = new List<float>();
+            float sum = 0.0f;
+            for (int j = 0; j < p.Count; j++)
+            {
+                sum = sum + p[j];
+                cumsum.Add(sum);
+            }
+            float r = Random.Range(0.0f, 1.0f);
+            for (int j = 0; j < p.Count; j++)
+            {
+                if (r < cumsum[j])
+                {
+                    Sequence.Add(Global.MagicList[j]);
+                    break;
+                }
+            }
         }
         
-        return randomSequence;
+        return Sequence;
     }
 
-    public NDarray Softmax(float tau){
-
-        NDarray masteryValues = np.array(Global.GD.kt.GetCurrentState().Values.ToArray());
-        NDarray p = np.zeros(masteryValues.size); // probability distribution over all actions
+    public List<float> Softmax(float tau){
+        //get softmax of mastery values
+        List<float> states = Global.GD.kt.GetCurrentState();
+        //calculate softmax from states
+        List<float> p = new List<float>();
         float sump = 0.0f;
-        for (int i = 0; i < masteryValues.size; i++){
-            p[i] = np.exp(-masteryValues[i] / tau); // We take the negative of the mastery value in order to prioritise weak skills
-            sump = sump + (float) p[i];
+        for (int i = 0; i < states.Count; i++){
+            p.Add(Mathf.Exp(-states[i] / tau)); // We take the negative of the mastery value in order to prioritise weak skills
+            sump = sump + p[i];
         }
-        for (int i = 0; i < masteryValues.size; i++){
+        for (int i = 0; i < states.Count; i++){
             p[i] = p[i] / sump;
         }
+
         return p;
     }
 }

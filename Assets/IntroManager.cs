@@ -19,6 +19,8 @@ public class IntroManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tutoStage = "init";
+        
         toLean = Global.GD.actionSpace[0].ToLower();
         TutoText = Tuto.GetComponentInChildren<TextMeshProUGUI>();
         hallway = GetComponentInChildren<Hallway>();
@@ -85,6 +87,10 @@ public class IntroManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        List<string> levelList = Global.GD.levelList;
+        int index = levelList.IndexOf(Global.GD.convoNode);
+        if(levelList.Count>index+1) Global.GD.availableLevels.Add(levelList[index + 1]);
+        UI.dead = true;
         Global.GD.convoNode = toLean + ".Flashback";
         UI.toggleUI("Dialog");
     }
