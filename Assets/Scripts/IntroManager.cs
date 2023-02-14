@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class IntroManager : MonoBehaviour

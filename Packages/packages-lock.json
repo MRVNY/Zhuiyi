@@ -6,17 +6,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.barracuda": {
-      "version": "3.0.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.burst": "1.6.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.imageconversion": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.burst": {
       "version": "1.7.3",
       "depth": 1,
@@ -112,16 +101,6 @@
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
-    },
-    "com.unity.ml-agents": {
-      "version": "file:ml-agents/com.unity.ml-agents",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.barracuda": "3.0.0",
-        "com.unity.modules.imageconversion": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      }
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",

@@ -17,7 +17,8 @@ public static class Global
 
     static Global()
     {
-
+        Cursor.visible = true;
+        Screen.lockCursor = false;
         charDict = new Dictionary<string, int>{  {"Wei", 3}, 
                                                         {"Gong", 3},
                                                         {"Huo", 4},
