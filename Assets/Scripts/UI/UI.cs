@@ -49,6 +49,7 @@ public class UI : MonoBehaviour
         controller = Player.GetComponent<FirstPersonController>();
         playerInput = Player.GetComponent<PlayerInput>();
         
+        dead = false;
         toggleUI("Dialog");
     }
 

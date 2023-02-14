@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 using StarterAssets;
 using UnityEngine;
 using Numpy;
+using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -62,6 +63,15 @@ public class SpawnManager : MonoBehaviour
     public List<float> Softmax(float tau){
         //get softmax of mastery values
         List<float> states = Global.GD.kt.GetCurrentState();
+
+        if (SceneManager.GetActiveScene().name=="Infinite" && states.Sum() >= states.Count)
+        {
+            List<string> levelList = Global.GD.levelList;
+            int index = levelList.IndexOf(Global.GD.convoNode);
+            if(levelList.Count>index+1) Global.GD.availableLevels.Add(levelList[index + 1]);
+            UI.dead = true;
+            UI.toMenu();
+        }
         //calculate softmax from states
         List<float> p = new List<float>();
         float sump = 0.0f;
