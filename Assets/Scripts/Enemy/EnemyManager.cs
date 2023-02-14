@@ -39,9 +39,10 @@ public class EnemyManager : SpawnManager
     {
         while (true)
         {
-            yield return new WaitForSeconds(Global.SpawnInterval);
+            yield return new WaitForSeconds(Global.GD.SpawnInterval);
             weakness = GetWeakness();
-            Vector3 spawnPos = new Vector3(Random.Range(-Global.spawnRadius, Global.spawnRadius), 0, Random.Range(-Global.spawnRadius, Global.spawnRadius)) 
+            int radius = Global.GD.spawnRadius;
+            Vector3 spawnPos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius)) 
                                + FirstPersonController.Instance.transform.position;
             var enemy = Instantiate(weaknesses[weakness], spawnPos, Quaternion.identity, transform);
         }

@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using StarterAssets;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI : MonoBehaviour
@@ -27,6 +29,8 @@ public class UI : MonoBehaviour
     
     public static bool damage = false;
     public static Task damaging;
+    public static bool dead = false;
+    public TextMeshProUGUI Life;
 
     private void Start()
     {
@@ -35,8 +39,7 @@ public class UI : MonoBehaviour
         GamePanel = transform.GetChild(3).gameObject;
         //MenuPanel = transform.GetChild(2);
         Grimoire = WritingPanel.GetComponentInChildren<VerticalLayoutGroup>().gameObject;
-
-
+        Grimoire.SetActive(false);
 
         if (Player == null)
         {
@@ -46,13 +49,12 @@ public class UI : MonoBehaviour
         controller = Player.GetComponent<FirstPersonController>();
         playerInput = Player.GetComponent<PlayerInput>();
         
-        toggleUI("Game");
-        //toggleUI("Dialog");
+        toggleUI("Dialog");
     }
 
     public static void Pause()
     {
-        Time.timeScale = 0.1f;
+        Time.timeScale = Global.GD.slomoSpeed;
         starterAssetsInputs.cursorLocked = false;
         controller.enabled = false;
         playerInput.enabled = false;
@@ -79,8 +81,18 @@ public class UI : MonoBehaviour
 
     private void Update()
     {
-        if(damage && damaging == null)
+        if (damage && damaging == null)
+        {
             damaging = Damage();
+            Life.text = Life.text.Substring(0, Life.text.Length - 1);
+            if (Life.text.Length == 0)
+            {
+                dead = true;
+                Global.GD.convoNode = "death";
+                toggleUI("Dialog");
+            }
+        }
+            
 
         if (Input.anyKeyDown)
         {
@@ -134,9 +146,9 @@ public class UI : MonoBehaviour
 
     private static void ToggleHelp(bool onlyLowMastery)
     {   
-        foreach (Transform tr in Grimoire.GetComponentsInChildren<Transform>(true))
+        foreach (Animator anim in Grimoire.GetComponentsInChildren<Animator>(true))
         {
-            GameObject characterGif = tr.gameObject; 
+            GameObject characterGif = anim.gameObject; 
             
             if (characterGif.name == "Grimoire")
             {
@@ -176,6 +188,8 @@ public class UI : MonoBehaviour
             case "Dialog":
                 DialogPanel.SetActive(true);
                 Pause();
+                Dialog.Instance.ClearDialog();
+                Dialog.Instance.setDialog();
                 break;
             case "Menu": 
                 //MenuPanel.SetActive(true);
@@ -185,8 +199,16 @@ public class UI : MonoBehaviour
                 GamePanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
                 Resume();
+                if (dead) toMenu();
                 break;
         }
+    }
+    
+    public static void toMenu()
+    {
+        Global.Save();
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Menu");
     }
         
 }

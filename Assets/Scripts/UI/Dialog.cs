@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -23,10 +24,10 @@ public class Dialog : MonoBehaviour
     
     public static Dialog Instance;
 
-    void Start()
+    private void Awake()
     {
         Instance = this;
-
+        
         if (Global.GD.convoNode != null)
         {
             convoTree = JObject.Parse(File.ReadAllText(Application.streamingAssetsPath+Path.DirectorySeparatorChar+"Dialog.json"));
@@ -35,9 +36,19 @@ public class Dialog : MonoBehaviour
             TextBox = GetComponentInChildren<TextMeshProUGUI>();
             skipButton = GetComponent<Button>();
             skipButton.onClick.AddListener(() => { Next(); });
-            
-            setDialog();
         }
+    }
+
+    void Start()
+    {
+        
+    }
+    
+    public void ClearDialog()
+    {
+        toWrite.Clear();
+        written = "";
+        TextBox.text = "";
     }
     
     public void setDialog()
@@ -83,7 +94,6 @@ public class Dialog : MonoBehaviour
         {
             UI.toggleUI("Game");
             toWrite.Clear();
-            //load menu
         }
 
         else if (skipped)
@@ -93,7 +103,6 @@ public class Dialog : MonoBehaviour
             if (toWrite.Count == 0)
             {
                 UI.toggleUI("Game");
-                //load menu
             }
             else setDialog();
         }

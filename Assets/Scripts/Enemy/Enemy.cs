@@ -22,6 +22,16 @@ public class Enemy : MonoBehaviour
             animator = GetComponent<Animator>();
             animator.runtimeAnimatorController = Idle;
         }
+        if (tag == "Hazard")
+        {
+            StartCoroutine(WaitToDestroy());
+        }
+    }
+    
+    IEnumerator WaitToDestroy()
+    {
+        yield return new WaitForSeconds(20);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

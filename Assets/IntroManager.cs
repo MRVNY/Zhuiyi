@@ -19,6 +19,7 @@ public class IntroManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        toLean = Global.GD.actionSpace[0].ToLower();
         TutoText = Tuto.GetComponentInChildren<TextMeshProUGUI>();
         hallway = GetComponentInChildren<Hallway>();
         hallway.SetUpTraining(new List<string>(){toLean}, 0);
@@ -76,8 +77,8 @@ public class IntroManager : MonoBehaviour
         
         if(tutoStage=="dialog" && UI.currentUI == "Game")
         {
+            UI.dead = true;
             Time.timeScale = 0;
-            //return to menu
         }
             
     }

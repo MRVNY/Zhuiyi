@@ -22,7 +22,7 @@ public class Lobby : TrainingEnv
     void Start()
     {
         rooms = GetComponentsInChildren<Room>().ToList(); 
-        SequenceLegnth = rooms.Count * Global.nb_agent_per_room;
+        SequenceLegnth = rooms.Count * Global.GD.nb_agent_per_room;
         
         weaknessDict = new Dictionary<string, GameObject>()
         {
@@ -56,7 +56,7 @@ public class Lobby : TrainingEnv
     {
         for(int i = 0; i < rooms.Count; i++)
         {
-            rooms[i].enemyList = Sequence.GetRange(i * Global.nb_agent_per_room, Global.nb_agent_per_room);
+            rooms[i].enemyList = Sequence.GetRange(i * Global.GD.nb_agent_per_room, Global.GD.nb_agent_per_room);
         }
     }
 
