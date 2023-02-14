@@ -157,23 +157,17 @@ public class UI : MonoBehaviour
             GameObject characterGif = anim.gameObject; 
             
             string KC = characterGif.name;
-            if (KC == "Grimoire" || !Global.GD.actionSpace.Contains(KC))
+            if (Global.GD.actionSpace.Contains(KC))
             {
-                continue;
-            }
-            
-            if (onlyLowMastery){
-                if (Global.GD.kt.GetMasteryOf(KC) < 0.5)
-
-                {   
-                    characterGif.SetActive(true);
-                } else {
-                    characterGif.SetActive(false);
+                if (onlyLowMastery)
+                {
+                    characterGif.SetActive((Global.GD.kt.GetMasteryOf(KC) < 0.5));
                 }
-            } else {
-                characterGif.SetActive(true);
+                else
+                    characterGif.SetActive(true);
             }
-            
+            else
+                characterGif.SetActive(false);
         }
     }
 
@@ -183,7 +177,7 @@ public class UI : MonoBehaviour
         WritingPanel.SetActive(false);
         DialogPanel.SetActive(false);
         GamePanel.SetActive(false);
-        TutoPanel.SetActive(false);
+        if(Global.GD.mode!="Intro") TutoPanel.SetActive(false);
         
         switch (panel)
         {
@@ -216,6 +210,7 @@ public class UI : MonoBehaviour
     public static void ToMenu()
     {
         Global.Save();
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Menu");
     }
