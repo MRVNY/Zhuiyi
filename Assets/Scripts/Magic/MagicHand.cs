@@ -60,6 +60,7 @@ public class MagicHand : MonoBehaviour
                 break;
             case "wei":
                 ActiveMagic = Wei;
+                Global.GD.kt.UpdateKnowledge("wei", true);
                 break;
         }
         
