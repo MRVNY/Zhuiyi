@@ -59,7 +59,7 @@ public class Obstacle : MonoBehaviour
                 List<string> levelList = Global.GD.levelList;
                 int index = levelList.IndexOf(Global.GD.convoNode);
                 if(levelList.Count>index+1) Global.GD.availableLevels.Add(levelList[index + 1]);
-                UI.toMenu();
+                UI.ToMenu();
             }
         }
     }
