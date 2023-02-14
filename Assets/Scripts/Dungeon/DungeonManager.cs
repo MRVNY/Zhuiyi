@@ -29,7 +29,7 @@ public class DungeonManager : SpawnManager
         index++;
         if(Trainings.Count > index)
         {
-            List<string> Sequence = GetSpawnSequence(Trainings[index].SequenceLegnth);
+            List<string> Sequence = GetSpawnSequence(Trainings[index].SequenceLength);
             Trainings[index].SetUpTraining(Sequence, index);
         }
     }

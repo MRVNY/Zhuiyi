@@ -22,7 +22,7 @@ public class Lobby : TrainingEnv
     void Start()
     {
         rooms = GetComponentsInChildren<Room>().ToList(); 
-        SequenceLegnth = rooms.Count * Global.GD.nb_agent_per_room;
+        SequenceLength = rooms.Count * Global.GD.nb_agent_per_room;
         
         weaknessDict = new Dictionary<string, GameObject>()
         {
