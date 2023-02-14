@@ -109,7 +109,6 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private void Recognize()
     {
-        // TODO: Remove once we are properly managing the canvas reset
         if (strokeIndex >= 3){
             Gesture candidate = new Gesture(allPoints.ToArray());
             (string,float) output = PointCloudRecognizer.Classify(candidate, trainingSet);
