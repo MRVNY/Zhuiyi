@@ -13,6 +13,7 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
+    public static GameObject TutoPanel;
     public static GameObject WritingPanel;
     public static GameObject DialogPanel;
     public static GameObject MenuPanel;
@@ -36,6 +37,7 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
+        TutoPanel = transform.GetChild(0).gameObject;
         WritingPanel = transform.GetChild(1).gameObject;
         DialogPanel = transform.GetChild(2).gameObject;
         GamePanel = transform.GetChild(3).gameObject;
@@ -174,6 +176,7 @@ public class UI : MonoBehaviour
         WritingPanel.SetActive(false);
         DialogPanel.SetActive(false);
         GamePanel.SetActive(false);
+        TutoPanel.SetActive(false);
         
         switch (panel)
         {

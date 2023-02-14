@@ -3,24 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using StarterAssets;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     private Animator animator;
     public bool blocked = false;
-    public AnimatorController Idle;
-    public AnimatorController Walk;
-    // public AnimatorController Run;
-    // public AnimatorController Attack;
 
     void Start()
     {
         if (tag != "Bubble" && tag != "Hazard")
         {
             animator = GetComponent<Animator>();
-            animator.runtimeAnimatorController = Idle;
+            animator.Play("Idle01");
         }
         if (tag == "Hazard")
         {
@@ -42,7 +37,7 @@ public class Enemy : MonoBehaviour
             float distToPlayer = Vector3.Distance(transform.position, FirstPersonController.Instance.transform.position);
             if (!blocked && distToPlayer < 20)
             {
-                if (tag != "Bubble") animator.runtimeAnimatorController = Walk;
+                if (tag != "Bubble") animator.Play("Walk");
                 transform.position = Vector3.MoveTowards(transform.position,
                     FirstPersonController.Instance.transform.position, 0.01f);
                 transform.rotation =
@@ -50,7 +45,7 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                if (tag != "Bubble") animator.runtimeAnimatorController = Idle;
+                if (tag != "Bubble") animator.Play("Idle01");
                 if (distToPlayer > 1000) Destroy(gameObject);
             }
 
@@ -69,7 +64,7 @@ public class Enemy : MonoBehaviour
 
     private async void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && tag != "Hazard" && collision.transform.parent==null)
+        if (collision.gameObject.tag == "Player" && tag != "Hazard")
         {
             UI.damage = true;
             Destroy(gameObject);

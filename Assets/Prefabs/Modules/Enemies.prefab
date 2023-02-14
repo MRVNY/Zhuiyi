@@ -57,10 +57,8 @@ MonoBehaviour:
     type: 3}
   AirEnemy: {fileID: 6410872041272171216, guid: b377659af648b4a8b8a8f526816c75be,
     type: 3}
-  HazardArea: {fileID: 0}
-  spawnRadius: 20
-  weakness: huo
-  SpawnInterval: 10
+  HazardArea: {fileID: 8788960743908145023, guid: f35d248d031bf472795562b069ee63f8,
+    type: 3}
 --- !u!1001 &2630342734099710933
 PrefabInstance:
   m_ObjectHideFlags: 0

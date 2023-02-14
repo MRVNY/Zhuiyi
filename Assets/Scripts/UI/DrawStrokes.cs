@@ -26,9 +26,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
     private Vector2 rectPos;
 
     private Gesture[] trainingSet = null;   // training set loaded from XML files
-
-    // private string[] three_strokes = new[] { "defense", "bow" };
-    // private string[] four_strokes = new[] { "fire", "water", "wind" };
+    
     private string[] three_strokes = new[] { "Wei", "Gong" };
     private string[] four_strokes = new[] { "Huo", "Shui", "Feng" };
     private void Start()
@@ -45,7 +43,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
         Writings.Clear();
         points.Clear();
         
-        foreach (var line in lines)
+        foreach (var line in GetComponentsInChildren<UILineRenderer>())
         {
             Destroy(line.gameObject);
         }

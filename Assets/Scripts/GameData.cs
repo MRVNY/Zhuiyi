@@ -48,6 +48,6 @@ public class GameData {
 	        "Infinite: Maze"
         };
         availableLevels.Add(levelList[0]);
-        availableLevels = levelList;
+        //availableLevels = levelList;
     }
 }
