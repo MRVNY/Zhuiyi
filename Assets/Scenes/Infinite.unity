@@ -28637,7 +28637,7 @@ PrefabInstance:
     - target: {fileID: 1243487883788237853, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -410
+      value: -420
       objectReference: {fileID: 0}
     - target: {fileID: 2731126482780786550, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
@@ -28657,7 +28657,7 @@ PrefabInstance:
     - target: {fileID: 2731126482780786550, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -290
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 2830377646427350308, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
@@ -28677,7 +28677,7 @@ PrefabInstance:
     - target: {fileID: 2830377646427350308, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -170
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 4283915268357276601, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
@@ -28697,7 +28697,7 @@ PrefabInstance:
     - target: {fileID: 4283915268357276601, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -530
+      value: -540
       objectReference: {fileID: 0}
     - target: {fileID: 5065689475530792672, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
@@ -28717,7 +28717,7 @@ PrefabInstance:
     - target: {fileID: 5065689475530792672, guid: 4f23f6769179c4e99a842e83be964403,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f23f6769179c4e99a842e83be964403, type: 3}
@@ -61723,6 +61723,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937072786}
   m_Mesh: {fileID: 4300000, guid: b31c62c35ced11c4383176ecffe930c9, type: 3}
+--- !u!1 &1938748843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938748845}
+  - component: {fileID: 1938748844}
+  m_Layer: 0
+  m_Name: JoyconManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1938748844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938748843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405bad29b2b998c408059182c189d9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableIMU: 1
+  EnableLocalize: 1
+--- !u!4 &1938748845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938748843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942249470
 GameObject:
   m_ObjectHideFlags: 0

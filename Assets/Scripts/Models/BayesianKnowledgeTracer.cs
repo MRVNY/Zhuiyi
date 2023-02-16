@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using static System.Math;
 
 [Serializable]
@@ -60,6 +61,11 @@ public class BayesianKnowledgeTracer {
 	// Careful: this exposes the KT object itself
 	public List<float> GetCurrentState()
 	{
+		string toPrint = "";
+		foreach (string kc in this.KCDict.Keys){
+			toPrint += kc + ": " + this.kt[kc] + ", ";
+		}
+		Debug.Log(toPrint);
 		return kt.Values.Cast<float>().ToList();
 	}
 
