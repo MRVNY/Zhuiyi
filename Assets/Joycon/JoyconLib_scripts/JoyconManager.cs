@@ -18,31 +18,37 @@ public class JoyconManager: MonoBehaviour
 	private const ushort product_r = 0x2007;
 
     public List<Joycon> j; // Array of all connected Joy-Cons
-    static JoyconManager instance;
-
-    public static JoyconManager Instance
-    {
-        get { return instance; }
-    }
+    public static JoyconManager Instance;
 
     void Awake()
     {
-        if (instance != null) Destroy(gameObject);
-        instance = this;
+	    j = new List<Joycon>();
+	    bool isLeft = false;
+	    try
+	    {
+		    //HIDapi.hid_exit();
+		    HIDapi.hid_init();
+	    }
+	    catch (DllNotFoundException e)
+	    {
+		    gameObject.SetActive(false);
+		    return;
+	    }
+	    
+	    DontDestroyOnLoad(transform.gameObject);
+
+	    if (Instance == null)
+	    {
+		    Instance = this;
+	    }
+	    else
+	    {
+		    Destroy(gameObject);
+		    return;
+	    }
+	    
+		
 		int i = 0;
-
-		j = new List<Joycon>();
-		bool isLeft = false;
-
-		try
-		{
-			HIDapi.hid_init();
-		}
-		catch (DllNotFoundException e)
-		{
-			gameObject.SetActive(false);
-			return;
-		}
 
 		IntPtr ptr = HIDapi.hid_enumerate(vendor_id, 0x0);
 		IntPtr top_ptr = ptr;

@@ -47,7 +47,7 @@ public class GameData {
 	        "Infinite: OpenSpace",
 	        "Infinite: Maze"
         };
-        availableLevels.Add(levelList[0]);
-        //availableLevels = levelList;
+        //availableLevels.Add(levelList[0]);
+        availableLevels = levelList.GetRange(0, levelList.Count);
     }
 }

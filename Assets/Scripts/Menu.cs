@@ -11,6 +11,8 @@ public class Menu : MonoBehaviour
 {
     public GameObject MenuMenu;
     public GameObject LevelMenu;
+
+    public GameObject ButtonPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,34 +21,34 @@ public class Menu : MonoBehaviour
             if (button.name == "Levels")
                 button.onClick.AddListener((() => { ShowLevels(); }));
             else if (button.name == "Reset")
-                button.onClick.AddListener((() => { Global.DeleteAllSaveFiles();
+                button.onClick.AddListener((() => { 
+                    Global.DeleteAllSaveFiles();
                     SceneManager.LoadScene("Menu");
                 }));
             else if (button.name == "Quit")
                 button.onClick.AddListener((() => { Application.Quit(); }));
         }
 
-        foreach (var button in LevelMenu.GetComponentsInChildren<Button>())
-        {
-            if (button.name == "Back")
-                button.onClick.AddListener((() => { ShowMenu(); }));
+      
+        LevelMenu.transform.GetChild(0).GetComponent<Button>().onClick.AddListener((() => { ShowMenu(); }));
 
-            Transform root = GetComponentInChildren<VerticalLayoutGroup>().transform;
-            GameObject buttonPrefab = root.GetChild(0).gameObject;
-            
-            foreach (var level in Global.GD.levelList)
-            {
-                GameObject NewButton = Instantiate(buttonPrefab, root);
-                NewButton.GetComponentInChildren<TextMeshProUGUI>().text = level;
-                string delegateLevel = level;
-                if(Global.GD.availableLevels.Contains(level))
-                    NewButton.GetComponent<Button>().onClick.AddListener((() => { LaunchGame(delegateLevel); }));
-                else NewButton.GetComponent<Button>().interactable = false;
-            }
-            
-            Destroy(root.GetChild(0).gameObject);
+        Transform root = LevelMenu.GetComponentInChildren<VerticalLayoutGroup>().transform;
+
+        for (int i = 0; i < root.childCount; i++)
+        {
+            Destroy(root.GetChild(i).gameObject);
         }
-        
+
+        foreach (var level in Global.GD.levelList)
+        {
+            GameObject NewButton = Instantiate(ButtonPrefab, root);
+            NewButton.GetComponentInChildren<TextMeshProUGUI>().text = level;
+            string delegateLevel = level;
+            if (Global.GD.availableLevels.Contains(level))
+                NewButton.GetComponent<Button>().onClick.AddListener((() => { LaunchGame(delegateLevel); }));
+            else NewButton.GetComponent<Button>().interactable = false;
+        }
+
         ShowMenu();
     }
 

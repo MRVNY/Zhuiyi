@@ -28,7 +28,7 @@ public static class Global
         KCDict = new Hashtable();
         foreach (string character in charDict.Keys)
         {
-            KCDict[character] = new Hashtable(){{"prior", 0.2f}, {"learn", 0.2f}};
+            KCDict[character] = new Hashtable(){{"prior", 0.0f}, {"learn", 0.2f}};
             // Note: we currently consider each character to be a knowledge component in itself. 
             // If we decide we want to differentiate the recognition and the writing of a character, this will have to change.
         }

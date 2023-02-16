@@ -161,11 +161,30 @@ public class UI : MonoBehaviour
             {
                 if (onlyLowMastery)
                 {
-                    characterGif.SetActive((Global.GD.kt.GetMasteryOf(KC) < 0.5));
+                    if (Global.GD.kt.GetMasteryOf(KC) < 0.3)
+                    {
+                        characterGif.SetActive(true);
+                        anim.enabled = true;
+                    }
+                    else if (Global.GD.kt.GetMasteryOf(KC) < 0.5)
+                    {
+                        characterGif.SetActive(true);
+                        //characterGif.GetComponent<Animator>().StopPlayback();
+                        //stop animation and show last frame
+                        anim.enabled = false;
+                        //anim.Play(KC.ToLower(), -1, 0);
+                    }
+                    else
+                    {
+                        characterGif.SetActive(false);
+                    }
                 }
                 else
+                {
                     characterGif.SetActive(true);
                     Global.adaptationManager.UsedHelp();
+                    anim.enabled = true;
+                }
             }
             else
                 characterGif.SetActive(false);

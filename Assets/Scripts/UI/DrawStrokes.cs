@@ -79,7 +79,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (lineRenderer.Points.Length > 3)
+        if (lineRenderer.Points.Length > 2)
         {
             Writings.Add(lineRenderer.Points.ToList());
             lines.Add(lineRenderer);
