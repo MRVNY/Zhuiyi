@@ -165,6 +165,7 @@ public class UI : MonoBehaviour
                 }
                 else
                     characterGif.SetActive(true);
+                    Global.adaptationManager.UsedHelp();
             }
             else
                 characterGif.SetActive(false);

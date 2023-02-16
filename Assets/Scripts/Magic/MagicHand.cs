@@ -36,6 +36,7 @@ public class MagicHand : MonoBehaviour
 
     public void Activate(string magicName)
     {   
+        Global.adaptationManager.UsedMagic();
         ActiveMagic = null;
         Huo.SetActive(false);
         Shui.SetActive(false);
