@@ -31,7 +31,7 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.tag == obstacleName && !passed)
         {
             block.isTrigger = true;
-            obstacle.SetActive(false);
+            obstacle?.SetActive(false);
             passed = true;
         }
         
@@ -40,7 +40,7 @@ public class Obstacle : MonoBehaviour
             if (obstacleName == "Wei" && collision.GetComponentInChildren<Wei>() != null)
             {
                 block.isTrigger = true;
-                obstacle.SetActive(false);
+                obstacle?.SetActive(false);
                 passed = true;
             }
             else UI.damage = true;

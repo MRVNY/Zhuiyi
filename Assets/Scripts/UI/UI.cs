@@ -34,6 +34,8 @@ public class UI : MonoBehaviour
     public TextMeshProUGUI Life;
     
     public static Joycon JC;
+    
+    private static Dictionary<string, Sprite> originalSprites = new Dictionary<string, Sprite>();
 
     private void Start()
     {
@@ -43,6 +45,11 @@ public class UI : MonoBehaviour
         GamePanel = transform.GetChild(3).gameObject;
         //MenuPanel = transform.GetChild(2);
         Grimoire = WritingPanel.GetComponentInChildren<VerticalLayoutGroup>().gameObject;
+        foreach (var anim in Grimoire.GetComponentsInChildren<Animator>(true))
+        {
+            if(!originalSprites.ContainsKey(anim.gameObject.name)) originalSprites.Add(anim.gameObject.name, anim.gameObject.GetComponent<Image>().sprite);
+        }
+        
         Grimoire.SetActive(false);
 
         if (Player == null)
@@ -169,10 +176,8 @@ public class UI : MonoBehaviour
                     else if (Global.GD.kt.GetMasteryOf(KC) < 0.5)
                     {
                         characterGif.SetActive(true);
-                        //characterGif.GetComponent<Animator>().StopPlayback();
-                        //stop animation and show last frame
                         anim.enabled = false;
-                        //anim.Play(KC.ToLower(), -1, 0);
+                        characterGif.GetComponent<Image>().sprite = originalSprites[KC];
                     }
                     else
                     {

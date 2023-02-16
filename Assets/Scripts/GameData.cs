@@ -21,7 +21,7 @@ public class GameData {
     
 	//Only for infinite mode
 	public  int spawnRadius = 15;
-	public  int SpawnInterval = 10;
+	public  int SpawnInterval = 5;
     
 	public  string mode = "dungeon";
 	
