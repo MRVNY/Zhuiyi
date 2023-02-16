@@ -36,7 +36,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
 
     private void OnEnable()
     {
-
+        Global.adaptationManager.OpenedCanvas();
         strokeIndex = 0;
         allPoints.Clear();
 
@@ -119,6 +119,7 @@ public class DrawStrokes : MonoBehaviour, IDragHandler, IDropHandler, IPointerDo
             {
                 GiveFeedback(true);
                 Debug.Log(gestureClass + ": " + score);
+                Global.adaptationManager.CharacterWritten(gestureClass, 0); // TODO: add time taken to write character
                 MagicHand.Instance.Activate(gestureClass);
             }
         }         

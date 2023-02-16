@@ -10,7 +10,7 @@ public static class Global
 {
     public static Dictionary<string, int> charDict; // Dictionary of characters and their number of strokes
     public static Hashtable KCDict; // Dictionary of knowledge components (characters) and their probabilities
-    public static QLearning qLearning;
+    public static AdaptationManager adaptationManager = new AdaptationManager();
     public static GameData GD;
 
     public static string[] MagicList = new[] { "Huo", "Shui", "Feng", "Gong", "Wei" };
@@ -53,6 +53,7 @@ public static class Global
     public static bool SaveExists(string key)
     {
         string path = savePath + key + ".txt";
+        Debug.Log(path);
         return File.Exists(path);
     }
     

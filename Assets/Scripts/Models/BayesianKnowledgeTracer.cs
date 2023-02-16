@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using static System.Math;
+using UnityEngine;
 
 [Serializable]
 public class BayesianKnowledgeTracer {
@@ -50,11 +51,20 @@ public class BayesianKnowledgeTracer {
 		return this.kt[kc_attempted] - p_mastered; // difference between mastery before and after resource was used
 	}*/
 
-	public void UpdateKnowledge(string KC, bool success){
+	public void UpdateKnowledge(string KC, bool success, float value = -1f){
 		if (success){
-			this.kt[KC] = Min(1, (float)this.kt[KC] + (float)((Hashtable)KCDict[KC])["learn"]);
+			if (value == -1f){
+				value = (float)((Hashtable)KCDict[KC])["learn"];
+			}
+			this.kt[KC] = Min(1, (float)this.kt[KC] + value);
+			Debug.Log("increased "+KC+" by"+value);
 		} else {
-			this.kt[KC] = Max(0, (float)this.kt[KC] - (float)((Hashtable)KCDict[KC])["learn"]);
+			if (value == -1f){
+				this.kt[KC] = Max(0, (float)this.kt[KC] - (float)((Hashtable)KCDict[KC])["learn"]);
+			} else {
+				this.kt[KC] = Max(0, (float)this.kt[KC] - value);
+				Debug.Log("decreased "+KC+" by"+value);
+			}
 		}
 	}
 

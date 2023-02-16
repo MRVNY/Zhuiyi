@@ -187,6 +187,7 @@ public class UI : MonoBehaviour
                 else
                 {
                     characterGif.SetActive(true);
+                    Global.adaptationManager.UsedHelp();
                     anim.enabled = true;
                 }
             }
