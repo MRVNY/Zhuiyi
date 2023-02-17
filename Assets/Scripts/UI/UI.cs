@@ -116,6 +116,7 @@ public class UI : MonoBehaviour
         if (JC != null)
         {
             float[] stick = JC.GetStick();
+            
             starterAssetsInputs.move = new Vector2(stick[0], stick[1]);
             
             if (JC.GetButtonDown(Joycon.Button.SHOULDER_2))
