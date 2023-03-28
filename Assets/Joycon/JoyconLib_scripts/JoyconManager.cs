@@ -31,6 +31,7 @@ public class JoyconManager: MonoBehaviour
 	    }
 	    catch (DllNotFoundException e)
 	    {
+		    print("HIDapi.dll not found!");
 		    gameObject.SetActive(false);
 		    return;
 	    }

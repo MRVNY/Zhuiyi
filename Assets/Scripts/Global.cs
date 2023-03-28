@@ -53,7 +53,6 @@ public static class Global
     public static bool SaveExists(string key)
     {
         string path = savePath + key + ".txt";
-        Debug.Log(path);
         return File.Exists(path);
     }
     
