@@ -44,7 +44,7 @@ public class IntroManager : MonoBehaviour
             tutoStage = "writing";
         }
         
-        if (tutoStage == "writing" && MagicHand.Instance.ActiveMagic != null)
+        if (tutoStage == "writing" && MagicHand.Instance != null && MagicHand.Instance.ActiveMagic != null)
         {
             if (MagicHand.Instance.ActiveMagic.tag == toLean)
             {
