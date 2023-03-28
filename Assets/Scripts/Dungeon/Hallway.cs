@@ -48,7 +48,6 @@ public class Hallway : TrainingEnv
         if(index>0) OpenDoor();
         for(int i = 0; i < Sequence.Count; i++)
         {
-            Debug.Log("test");
             obstacles[i].obstacleName = Sequence[i];
             GameObject toInstantiate = weaknessDict[Sequence[i]];
             obstacles[i].obstacle = Instantiate(toInstantiate,obstacles[i].transform.position,obstacles[i].transform.rotation,obstacles[i].transform);
