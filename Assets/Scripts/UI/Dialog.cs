@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
@@ -30,13 +31,37 @@ public class Dialog : MonoBehaviour
         
         if (Global.GD.convoNode != null)
         {
-            convoTree = JObject.Parse(File.ReadAllText(Application.streamingAssetsPath+Path.DirectorySeparatorChar+"Dialog.json"));
+            StartCoroutine("LoadConvo");
+            
             node = Global.GD.convoNode;
             
             TextBox = GetComponentInChildren<TextMeshProUGUI>();
             skipButton = GetComponent<Button>();
             skipButton.onClick.AddListener(() => { Next(); });
         }
+    }
+
+    private IEnumerator LoadConvo()
+    {
+        if(Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            UnityWebRequest webRequest = UnityWebRequest.Get(Application.streamingAssetsPath + Path.DirectorySeparatorChar + "Dialog.json");
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Failed to load data from URL: " + webRequest.error);
+                yield break;
+            }
+
+            convoTree = JObject.Parse(webRequest.downloadHandler.text);
+        }
+        else
+        {
+            convoTree = JObject.Parse(File.ReadAllText(Application.streamingAssetsPath + Path.DirectorySeparatorChar + "Dialog.json"));
+        }
+        
+        print(convoTree);
     }
 
     void Start()
