@@ -1,0 +1,42 @@
+{
+  "Intro: Huo": {
+    "en": "Where am I? \nWhat happened? \nI can't remember anything."
+  },
+  
+  "Huo.Flashback": {
+    "en" : "There was a blackout.\nDad lit up candles,\nI felt safe and warm."
+  },
+
+  "Shui.Flashback": {
+    "en": "I lit dad's beard on fire, mom splashed her cup on him. \nI've never seen him being mad while laughing so hard. \nI was grounded for a month. \nBut it was worth it."
+  },
+
+  "Feng.Flashback": {
+    "en": "It was my birthday, Mom lit up the candles.\nThey sang me the birthday song, I made a wish. \nI blew the candles."
+  },
+  
+  "Gong.Flashback": {
+    "en": "When to the fair today.\nThere was a stand where people shoot arrows at balloons and win prizes.\nI won a teddy bear."
+  },
+  
+  "Wei.Flashback": {
+    "en": "There are bubbles with people in them on the lake, it's some kind of game.\nI hoped in with my little brother. \nWe were rolling all over. At some point my stinky foot got into my brother mouth.\nIt was epic."
+  },
+  
+  "Training: Huo.Shui": {
+    "en" : "C-c-can you hear me? \nListen, you've been in a car crash, and it seems that it has damaged the part of your brain that processes your maternal language and your childhood memories. \nWe've been trying a new experimental method that puts your brain in a simulation which will help you recover the damage. We need you to use the knowledge you've picked up so far and use it.\nThis is a dungeon level where train on learned characters, you will go through obstacles as well as fight enemies with the correct magic, good luck!"
+  },
+
+  "Training: Huo.Shui.Feng.Gong": {
+    "en" : "Alright, you're doing good with the new characters, more memories are coming back. \nJust keep going!"
+  },
+  
+  "Infinite: OpenSpace": {
+    "en": "Good! You're doing very well, I think with this speed, we can... Wait what? How is this possible?\nOK, hold on, we're detecting some interference in our system... How can it...\nCan you hear me? It seems someone has been attacking our system, they changed the level difficulty and danger to maximum. \nIf you lose here, we don't know if you'll come back from your coma. Someone really doesn't want you to recover. \nOK, I've unlocked all the characters for you, I'll help you however I can, but it's up to you to defend yourself!"
+  },
+  
+  "Infinite: Maze": {
+    "en": "You've defended yourself and recovered some of the characters and memories. \nHow much longer will it take you to recover your maternal language skills? \nWho was the person that tried to sabotage you? \nFor now, just focus on recovering with this infinite maze mode"
+  }
+  
+}
