@@ -1,3 +1,5 @@
+[![YouTube Video](https://img.youtube.com/vi/3nW_ubSfw1I/0.jpg)](https://www.youtube.com/watch?v=3nW_ubSfw1I)
+
 # Introduction
 
 追忆 · In Search of Lost Words is a 3D first-person perspective game that follows the story of a young person on their journey to recover their mother tongue. The character goes through a series of challenges designed by scientists in order to relearn words, and rediscovers their memories along the way.
